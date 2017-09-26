@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8441B1F71D52B00545D15 /* AppDelegate.swift */; };
-		33C8441E1F71D52B00545D15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8441D1F71D52B00545D15 /* ViewController.swift */; };
-		33C844211F71D52B00545D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C8441F1F71D52B00545D15 /* Main.storyboard */; };
 		33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33C844221F71D52B00545D15 /* RollingGrill.xcdatamodeld */; };
 		33C844261F71D52B00545D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C844251F71D52B00545D15 /* Assets.xcassets */; };
 		33C844291F71D52B00545D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C844271F71D52B00545D15 /* LaunchScreen.storyboard */; };
+		33C844311F71D64700545D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C844301F71D64700545D15 /* Main.storyboard */; };
+		33C844361F71D6D100545D15 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C844351F71D6D100545D15 /* DrinkViewController.swift */; };
+		33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C844371F71D6DC00545D15 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33C844181F71D52B00545D15 /* RollingGrill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollingGrill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C8441B1F71D52B00545D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33C8441D1F71D52B00545D15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		33C844201F71D52B00545D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33C844231F71D52B00545D15 /* RollingGrill.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RollingGrill.xcdatamodel; sourceTree = "<group>"; };
 		33C844251F71D52B00545D15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33C844281F71D52B00545D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33C8442A1F71D52B00545D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33C844301F71D64700545D15 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		33C844351F71D6D100545D15 /* DrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
+		33C844371F71D6DC00545D15 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		33C8441A1F71D52B00545D15 /* RollingGrill */ = {
 			isa = PBXGroup;
 			children = (
+				33C844341F71D6BF00545D15 /* Drink */,
+				33C844321F71D69F00545D15 /* Menu */,
+				33C844301F71D64700545D15 /* Main.storyboard */,
 				33C8441B1F71D52B00545D15 /* AppDelegate.swift */,
-				33C8441D1F71D52B00545D15 /* ViewController.swift */,
-				33C8441F1F71D52B00545D15 /* Main.storyboard */,
 				33C844251F71D52B00545D15 /* Assets.xcassets */,
 				33C844271F71D52B00545D15 /* LaunchScreen.storyboard */,
 				33C8442A1F71D52B00545D15 /* Info.plist */,
 				33C844221F71D52B00545D15 /* RollingGrill.xcdatamodeld */,
 			);
 			path = RollingGrill;
+			sourceTree = "<group>";
+		};
+		33C844321F71D69F00545D15 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				33C844371F71D6DC00545D15 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		33C844341F71D6BF00545D15 /* Drink */ = {
+			isa = PBXGroup;
+			children = (
+				33C844351F71D6D100545D15 /* DrinkViewController.swift */,
+			);
+			path = Drink;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +145,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C844311F71D64700545D15 /* Main.storyboard in Resources */,
 				33C844291F71D52B00545D15 /* LaunchScreen.storyboard in Resources */,
 				33C844261F71D52B00545D15 /* Assets.xcassets in Resources */,
-				33C844211F71D52B00545D15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,23 +158,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C844361F71D6D100545D15 /* DrinkViewController.swift in Sources */,
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
-				33C8441E1F71D52B00545D15 /* ViewController.swift in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
+				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		33C8441F1F71D52B00545D15 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33C844201F71D52B00545D15 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		33C844271F71D52B00545D15 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
