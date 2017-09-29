@@ -14,6 +14,7 @@
 		33C844311F71D64700545D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C844301F71D64700545D15 /* Main.storyboard */; };
 		33C844361F71D6D100545D15 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C844351F71D6D100545D15 /* DrinkViewController.swift */; };
 		33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C844371F71D6DC00545D15 /* MenuViewController.swift */; };
+		33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1093E1F7EF6F600374166 /* DrinkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		33C844301F71D64700545D15 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		33C844351F71D6D100545D15 /* DrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
 		33C844371F71D6DC00545D15 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		33D1093E1F7EF6F600374166 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +83,18 @@
 		33C844341F71D6BF00545D15 /* Drink */ = {
 			isa = PBXGroup;
 			children = (
+				33D1093D1F7EF6CF00374166 /* Cell */,
 				33C844351F71D6D100545D15 /* DrinkViewController.swift */,
 			);
 			path = Drink;
+			sourceTree = "<group>";
+		};
+		33D1093D1F7EF6CF00374166 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33D1093E1F7EF6F600374166 /* DrinkTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
+				33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

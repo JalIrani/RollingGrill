@@ -12,8 +12,9 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var drinkTableView: UITableView!
     
-    var detailLabelArray = ["Repeat", "Name", "Sound", "Snooze", "School"]
-    var detailDisclosureArray = ["Never", "Alarm", "Marimba", "None", "None"]
+    var drinkItemArray = ["this is the longest drink name of all time so im gonna see where it goes", "Heiniken", "Sangria", "Coor Lite", "Miller Lite"]
+    var drinkPriceArray = ["12.99", "4.99", "7.50", "1.50", "2.25"]
+    var drinkDescriptionArray = ["This is mixed with all of your favorite tequila including don julio and patron coffee", "its beer", "its soft", "its beer", "i love miller lite"]
     
     // RGB values for Big text: R:117 G:111 B:99
     
@@ -28,14 +29,23 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return detailLabelArray.count
+        return drinkItemArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as UITableViewCell
-//        cell.textLabel?.text = detailLabelArray[indexPath.row]
-//        cell.detailTextLabel?.text = detailDisclosureArray[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as! DrinkTableViewCell
+        cell.drinkItemLabel.text = drinkItemArray[indexPath.row]
+        cell.drinkPriceLabel.text = drinkPriceArray[indexPath.row]
+        cell.drinkDescriptionLabel.text = drinkDescriptionArray[indexPath.row]
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
+//    
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableViewAutomaticDimension
+//    }
 
 }

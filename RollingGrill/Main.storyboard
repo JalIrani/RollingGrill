@@ -95,36 +95,46 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="drinkCell" rowHeight="60" id="J9c-6v-ryN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="drinkCell" rowHeight="60" id="J9c-6v-ryN" customClass="DrinkTableViewCell" customModule="RollingGrill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J9c-6v-ryN" id="w3C-UZ-7SO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drink Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niR-m0-Zet">
-                                                    <rect key="frame" x="8" y="4" width="218" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niR-m0-Zet">
+                                                    <rect key="frame" x="8" y="4" width="82.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lightly breaded chicken breast, in a marsala wine sauce with sautéed mushrooms, grape tomatoes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deS-RP-qTl">
-                                                    <rect key="frame" x="8" y="27" width="359" height="33"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deS-RP-qTl">
+                                                    <rect key="frame" x="8" y="27" width="359" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuV-QP-Lme">
-                                                    <rect key="frame" x="262" y="4" width="105" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuV-QP-Lme">
+                                                    <rect key="frame" x="310.5" y="4" width="46.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="niR-m0-Zet" firstAttribute="leading" secondItem="w3C-UZ-7SO" secondAttribute="leading" constant="8" id="Gmy-7g-Kvo"/>
+                                                <constraint firstItem="nuV-QP-Lme" firstAttribute="leading" secondItem="niR-m0-Zet" secondAttribute="trailing" constant="220" id="HZn-0G-w6G"/>
+                                                <constraint firstItem="niR-m0-Zet" firstAttribute="top" secondItem="w3C-UZ-7SO" secondAttribute="top" constant="4" id="gGr-U4-Xmp"/>
+                                                <constraint firstAttribute="trailing" secondItem="nuV-QP-Lme" secondAttribute="trailing" constant="18" id="jTN-tE-IPR"/>
+                                                <constraint firstItem="nuV-QP-Lme" firstAttribute="top" secondItem="w3C-UZ-7SO" secondAttribute="top" constant="4" id="wBb-u6-iMf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="drinkDescriptionLabel" destination="deS-RP-qTl" id="td3-wT-6mT"/>
+                                            <outlet property="drinkItemLabel" destination="niR-m0-Zet" id="uDJ-q7-1fK"/>
+                                            <outlet property="drinkPriceLabel" destination="nuV-QP-Lme" id="mit-ah-RIY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
