@@ -102,12 +102,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niR-m0-Zet">
-                                                    <rect key="frame" x="8" y="4" width="82.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deS-RP-qTl">
                                                     <rect key="frame" x="8" y="27" width="359" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,13 +115,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niR-m0-Zet">
+                                                    <rect key="frame" x="8" y="4" width="287" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="niR-m0-Zet" firstAttribute="leading" secondItem="w3C-UZ-7SO" secondAttribute="leading" constant="8" id="Gmy-7g-Kvo"/>
-                                                <constraint firstItem="nuV-QP-Lme" firstAttribute="leading" secondItem="niR-m0-Zet" secondAttribute="trailing" constant="220" id="HZn-0G-w6G"/>
-                                                <constraint firstItem="niR-m0-Zet" firstAttribute="top" secondItem="w3C-UZ-7SO" secondAttribute="top" constant="4" id="gGr-U4-Xmp"/>
-                                                <constraint firstAttribute="trailing" secondItem="nuV-QP-Lme" secondAttribute="trailing" constant="18" id="jTN-tE-IPR"/>
-                                                <constraint firstItem="nuV-QP-Lme" firstAttribute="top" secondItem="w3C-UZ-7SO" secondAttribute="top" constant="4" id="wBb-u6-iMf"/>
+                                                <constraint firstItem="niR-m0-Zet" firstAttribute="leading" secondItem="w3C-UZ-7SO" secondAttribute="leading" constant="8" id="Uem-2T-jjP"/>
+                                                <constraint firstAttribute="trailing" secondItem="niR-m0-Zet" secondAttribute="trailing" constant="80" id="Vxq-GZ-5fJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="nuV-QP-Lme" secondAttribute="trailing" constant="18" id="es5-tv-Se1"/>
+                                                <constraint firstItem="niR-m0-Zet" firstAttribute="top" secondItem="w3C-UZ-7SO" secondAttribute="top" constant="4" id="toF-a0-SPD"/>
+                                                <constraint firstItem="nuV-QP-Lme" firstAttribute="top" secondItem="w3C-UZ-7SO" secondAttribute="top" constant="4" id="v2N-BQ-eBZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
