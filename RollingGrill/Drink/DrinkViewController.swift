@@ -35,10 +35,12 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as! DrinkTableViewCell
         cell.drinkItemLabel.text = drinkItemArray[indexPath.row]
-        cell.drinkPriceLabel.text = drinkPriceArray[indexPath.row]
+        cell.drinkPriceLabel.text = "$" + drinkPriceArray[indexPath.row]
         cell.drinkDescriptionLabel.text = drinkDescriptionArray[indexPath.row]
         
         cell.drinkItemLabel.textColor? = .itemName
+        cell.drinkPriceLabel.textColor? = .itemName
+        cell.drinkDescriptionLabel.textColor? = .itemName
         return cell
     }
     
