@@ -37,6 +37,8 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.drinkItemLabel.text = drinkItemArray[indexPath.row]
         cell.drinkPriceLabel.text = drinkPriceArray[indexPath.row]
         cell.drinkDescriptionLabel.text = drinkDescriptionArray[indexPath.row]
+        
+        cell.drinkItemLabel.textColor? = .itemName
         return cell
     }
     

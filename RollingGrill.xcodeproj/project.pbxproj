@@ -15,6 +15,7 @@
 		33C844361F71D6D100545D15 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C844351F71D6D100545D15 /* DrinkViewController.swift */; };
 		33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C844371F71D6DC00545D15 /* MenuViewController.swift */; };
 		33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1093E1F7EF6F600374166 /* DrinkTableViewCell.swift */; };
+		33E463E41F8580CB000F0086 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E463E31F8580CB000F0086 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		33C844351F71D6D100545D15 /* DrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
 		33C844371F71D6DC00545D15 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		33D1093E1F7EF6F600374166 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
+		33E463E31F8580CB000F0086 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		33C8441A1F71D52B00545D15 /* RollingGrill */ = {
 			isa = PBXGroup;
 			children = (
+				33E463E21F8580B1000F0086 /* Resources */,
 				33C844341F71D6BF00545D15 /* Drink */,
 				33C844321F71D69F00545D15 /* Menu */,
 				33C844301F71D64700545D15 /* Main.storyboard */,
@@ -95,6 +98,14 @@
 				33D1093E1F7EF6F600374166 /* DrinkTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		33E463E21F8580B1000F0086 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33E463E31F8580CB000F0086 /* Colors.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C844361F71D6D100545D15 /* DrinkViewController.swift in Sources */,
+				33E463E41F8580CB000F0086 /* Colors.swift in Sources */,
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
