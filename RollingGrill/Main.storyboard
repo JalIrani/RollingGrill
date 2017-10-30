@@ -85,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="2356" y="-860.41979010494754"/>
         </scene>
-        <!--Drink View Controller-->
+        <!--Drinks-->
         <scene sceneID="CsO-pu-WKi">
             <objects>
                 <viewController id="ya9-ND-7uh" customClass="DrinkViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +157,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t8P-aI-Eg2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="moB-aC-Aif"/>
+                    <navigationItem key="navigationItem" title="Drinks" id="moB-aC-Aif"/>
                     <connections>
                         <outlet property="drinkTableView" destination="bL4-0x-Of6" id="bfM-MP-dNE"/>
                     </connections>

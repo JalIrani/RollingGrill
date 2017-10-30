@@ -16,11 +16,22 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var drinkPriceArray = ["12.99", "4.99", "7.50", "1.50", "2.25"]
     var drinkDescriptionArray = ["This is mixed with all of your favorite tequila including don julio and patron coffee", "its beer", "its soft", "its beer", "i love miller lite"]
     
+    fileprivate var filteredDrinkItem = [String]()
+    fileprivate var filteredDrinkPrice = [String]()
+    fileprivate var filteredDrinkDescription = [String]()
+    fileprivate var filterring = false
+    
     // RGB values for Big text: R:117 G:111 B:99
     
     override func viewDidLoad() {
         super.viewDidLoad()
         drinkTableView.tableFooterView = UIView()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.itemName]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.itemName]
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self as UISearchResultsUpdating
+        self.navigationItem.searchController = search
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,14 +40,20 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drinkItemArray.count
+        return self.filterring ? self.filteredDrinkItem.count : drinkItemArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as! DrinkTableViewCell
-        cell.drinkItemLabel.text = drinkItemArray[indexPath.row]
-        cell.drinkPriceLabel.text = "$" + drinkPriceArray[indexPath.row]
-        cell.drinkDescriptionLabel.text = drinkDescriptionArray[indexPath.row]
+        if self.filterring {
+            cell.drinkItemLabel.text = self.filteredDrinkItem[indexPath.row]
+            cell.drinkPriceLabel.text = self.filteredDrinkPrice[indexPath.row]
+            cell.drinkDescriptionLabel.text = self.filteredDrinkDescription[indexPath.row]
+        } else {
+            cell.drinkItemLabel.text = drinkItemArray[indexPath.row]
+            cell.drinkPriceLabel.text = "$" + drinkPriceArray[indexPath.row]
+            cell.drinkDescriptionLabel.text = drinkDescriptionArray[indexPath.row]
+        }
         
         cell.drinkItemLabel.textColor? = .itemName
         cell.drinkPriceLabel.textColor? = .itemName
@@ -51,5 +68,30 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+}
 
+extension DrinkViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text, !text.isEmpty {
+            var index = 0
+            var counter = 0
+            self.filteredDrinkItem = self.drinkItemArray.filter({ (drink) -> Bool in
+                if drink.lowercased().contains(text.lowercased()) {
+                    filteredDrinkPrice.insert("$" + self.drinkPriceArray[index], at: counter)
+                    filteredDrinkDescription.insert(self.drinkDescriptionArray[index], at: counter)
+                    counter = counter + 1
+                }
+                index = index + 1
+                return drink.lowercased().contains(text.lowercased())
+            })
+            self.filterring = true
+        }
+        else {
+            self.filterring = false
+            self.filteredDrinkItem = [String]()
+            self.filteredDrinkPrice = [String]()
+            self.filteredDrinkDescription = [String]()
+        }
+        self.drinkTableView.reloadData()
+    }
 }
