@@ -166,34 +166,70 @@
             </objects>
             <point key="canvasLocation" x="2356" y="-171.36431784107947"/>
         </scene>
-        <!--View Controller-->
+        <!--About-->
         <scene sceneID="ouJ-T0-Vji">
             <objects>
                 <viewController id="mlV-AC-v0h" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h9V-20-YbT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ekc-oI-uB1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvU-2t-dRS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTO-5b-CTY">
-                                        <rect key="frame" x="67" y="149" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.019891490399700618" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvg-lI-tVB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBD-zh-Inj">
+                                                <rect key="frame" x="166" y="823" width="51" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lotz" translatesAutoresizingMaskIntoConstraints="NO" id="peh-Fc-50v">
+                                                <rect key="frame" x="0.0" y="0.0" width="169" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lbG-ba-C4I">
+                                                <rect key="frame" x="177" y="0.0" width="198" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <mutableString key="text">Owner and Chef Matt Lotz’s passions are cooking and grilling. Starting at a young age, he would experiment in his mother’s kitchen, using his individual style and personality to see what new mouthwatering recipe he could create. Now in his early 20’s, he is putting his talent into his catering and carry out location at The Rolling Grill.  His famous pit beef is made with his own special rub and marinates for at least two days to ensure delicious flavor in every bite. From his backyard barbecue, to his banquet style entrees, and right down to his sides and desserts, everything on the menu is homemade with the freshest ingredients. Whether you are having a small get together with friends and family or hosting a large-scale event, you can rest easy knowing that Matt Lotz and The Rolling Grill team will not disappoint!</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="NFB-Eu-bLx"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Rvg-lI-tVB" secondAttribute="trailing" id="5R9-zG-24r"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rvg-lI-tVB" secondAttribute="bottom" id="7jo-KA-s86"/>
+                                    <constraint firstItem="Rvg-lI-tVB" firstAttribute="top" secondItem="jvU-2t-dRS" secondAttribute="top" id="aMg-fk-8Xh"/>
+                                    <constraint firstItem="Rvg-lI-tVB" firstAttribute="leading" secondItem="jvU-2t-dRS" secondAttribute="leading" id="tz4-hG-93w"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jvU-2t-dRS" firstAttribute="leading" secondItem="lsK-ib-0SM" secondAttribute="leading" id="250-tA-VgM"/>
+                            <constraint firstAttribute="bottom" secondItem="jvU-2t-dRS" secondAttribute="bottom" id="37y-C4-Mbi"/>
+                            <constraint firstItem="Rvg-lI-tVB" firstAttribute="width" secondItem="h9V-20-YbT" secondAttribute="width" id="Nt8-A7-2r0"/>
+                            <constraint firstItem="jvU-2t-dRS" firstAttribute="top" secondItem="lsK-ib-0SM" secondAttribute="top" id="Rjx-y4-P3X"/>
+                            <constraint firstItem="jvU-2t-dRS" firstAttribute="trailing" secondItem="lsK-ib-0SM" secondAttribute="trailing" id="hAB-jt-aWF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lsK-ib-0SM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="z2j-vN-7Wa"/>
+                    <navigationItem key="navigationItem" title="About" id="z2j-vN-7Wa"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHS-Pc-ANC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="555.47226386806597"/>
+            <point key="canvasLocation" x="2356" y="675.56221889055473"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mnh-Kw-tu7">
@@ -273,4 +309,7 @@
             <point key="canvasLocation" x="1416.8" y="556.37181409295351"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lotz" width="848" height="1254"/>
+    </resources>
 </document>

@@ -43,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		331F0CAC1FA7AFE200586361 /* Connect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Connect;
+			sourceTree = "<group>";
+		};
 		33C8440F1F71D52B00545D15 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +69,7 @@
 		33C8441A1F71D52B00545D15 /* RollingGrill */ = {
 			isa = PBXGroup;
 			children = (
+				331F0CAC1FA7AFE200586361 /* Connect */,
 				33E463E21F8580B1000F0086 /* Resources */,
 				33C844341F71D6BF00545D15 /* Drink */,
 				33C844321F71D69F00545D15 /* Menu */,
