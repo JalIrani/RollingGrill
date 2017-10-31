@@ -10,16 +10,15 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Helvetica.ttc">
-            <string>Helvetica</string>
             <string>Helvetica-Bold</string>
-            <string>Helvetica-Light</string>
             <string>Helvetica-Oblique</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Menu View Controller-->
+        <!--Menu-->
         <scene sceneID="kYN-1V-0U7">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84b-FX-cpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ztc-pT-Fbw" customClass="MenuViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FlO-GG-oLD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -29,36 +28,49 @@
                                 <rect key="frame" x="0.0" y="15" width="375" height="652"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" rowHeight="60" id="EWh-L4-WA3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" rowHeight="60" id="5Ri-X0-xyQ" customClass="MenuTableViewCell" customModule="RollingGrill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EWh-L4-WA3" id="9aA-zn-fgT">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Ri-X0-xyQ" id="rdN-xv-kNL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sv6-3V-iGM">
-                                                    <rect key="frame" x="8" y="4" width="218" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fax-pl-NIP">
+                                                    <rect key="frame" x="8" y="29" width="359" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Oblique" family="Helvetica" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a test" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31b-lb-f0L">
-                                                    <rect key="frame" x="8" y="27" width="359" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQH-we-zMY">
+                                                    <rect key="frame" x="306.5" y="4" width="50.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcI-mr-D8m">
-                                                    <rect key="frame" x="262" y="4" width="105" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-b5-0tr">
+                                                    <rect key="frame" x="8" y="4" width="287" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="DQH-we-zMY" secondAttribute="trailing" constant="18" id="8Xm-Gn-ODW"/>
+                                                <constraint firstItem="Fax-pl-NIP" firstAttribute="leading" secondItem="rdN-xv-kNL" secondAttribute="leading" constant="8" id="9Xk-Cm-dzb"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fax-pl-NIP" secondAttribute="bottom" constant="14" id="HMa-qf-hB7"/>
+                                                <constraint firstItem="yB6-b5-0tr" firstAttribute="leading" secondItem="rdN-xv-kNL" secondAttribute="leading" constant="8" id="HVZ-ea-Vlk"/>
+                                                <constraint firstAttribute="trailing" secondItem="yB6-b5-0tr" secondAttribute="trailing" constant="80" id="LT3-it-c9P"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fax-pl-NIP" secondAttribute="trailing" constant="8" id="RlU-tl-dVn"/>
+                                                <constraint firstItem="DQH-we-zMY" firstAttribute="top" secondItem="rdN-xv-kNL" secondAttribute="top" constant="4" id="Uwa-J6-loa"/>
+                                                <constraint firstItem="yB6-b5-0tr" firstAttribute="top" secondItem="rdN-xv-kNL" secondAttribute="top" constant="4" id="Xa3-xj-FRy"/>
+                                                <constraint firstItem="Fax-pl-NIP" firstAttribute="top" secondItem="yB6-b5-0tr" secondAttribute="bottom" constant="4" id="gew-tS-eMU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="drinkDescriptionLabel" destination="Fax-pl-NIP" id="iUu-1g-jfo"/>
+                                            <outlet property="drinkItemLabel" destination="yB6-b5-0tr" id="7Rb-pf-a0B"/>
+                                            <outlet property="drinkPriceLabel" destination="DQH-we-zMY" id="mXm-iH-U9j"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -76,12 +88,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qbU-JD-pt5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AIV-rn-tKt"/>
+                    <navigationItem key="navigationItem" title="Menu" id="AIV-rn-tKt"/>
                     <connections>
                         <outlet property="menuTableView" destination="S4E-iA-878" id="bMN-l7-JPa"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="84b-FX-cpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2356" y="-860.41979010494754"/>
         </scene>
@@ -195,7 +206,7 @@
                                                 <rect key="frame" x="177" y="0.0" width="198" height="250"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <mutableString key="text">Owner and Chef Matt Lotz’s passions are cooking and grilling. Starting at a young age, he would experiment in his mother’s kitchen, using his individual style and personality to see what new mouthwatering recipe he could create. Now in his early 20’s, he is putting his talent into his catering and carry out location at The Rolling Grill.  His famous pit beef is made with his own special rub and marinates for at least two days to ensure delicious flavor in every bite. From his backyard barbecue, to his banquet style entrees, and right down to his sides and desserts, everything on the menu is homemade with the freshest ingredients. Whether you are having a small get together with friends and family or hosting a large-scale event, you can rest easy knowing that Matt Lotz and The Rolling Grill team will not disappoint!</mutableString>
+                                                <string key="text">Owner and Chef Matt Lotz’s passions are cooking and grilling. Starting at a young age, he would experiment in his mother’s kitchen, using his individual style and personality to see what new mouthwatering recipe he could create. Now in his early 20’s, he is putting his talent into his catering and carry out location at The Rolling Grill.  His famous pit beef is made with his own special rub and marinates for at least two days to ensure delicious flavor in every bite. From his backyard barbecue, to his banquet style entrees, and right down to his sides and desserts, everything on the menu is homemade with the freshest ingredients. Whether you are having a small get together with friends and family or hosting a large-scale event, you can rest easy knowing that Matt Lotz and The Rolling Grill team will not disappoint!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>

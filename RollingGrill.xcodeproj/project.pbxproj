@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33C548C41FA9259D00D34899 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */; };
 		33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8441B1F71D52B00545D15 /* AppDelegate.swift */; };
 		33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33C844221F71D52B00545D15 /* RollingGrill.xcdatamodeld */; };
 		33C844261F71D52B00545D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C844251F71D52B00545D15 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		33C844181F71D52B00545D15 /* RollingGrill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollingGrill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C8441B1F71D52B00545D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C844231F71D52B00545D15 /* RollingGrill.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RollingGrill.xcdatamodel; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		33C548C21FA9258A00D34899 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		33C8440F1F71D52B00545D15 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		33C844321F71D69F00545D15 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				33C548C21FA9258A00D34899 /* Cell */,
 				33C844371F71D6DC00545D15 /* MenuViewController.swift */,
 			);
 			path = Menu;
@@ -198,6 +209,7 @@
 			files = (
 				33C844361F71D6D100545D15 /* DrinkViewController.swift in Sources */,
 				33E463E41F8580CB000F0086 /* Colors.swift in Sources */,
+				33C548C41FA9259D00D34899 /* MenuTableViewCell.swift in Sources */,
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
