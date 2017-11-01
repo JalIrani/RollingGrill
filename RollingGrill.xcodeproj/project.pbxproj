@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */; };
+		339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */; };
 		33C548C41FA9259D00D34899 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */; };
 		33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8441B1F71D52B00545D15 /* AppDelegate.swift */; };
 		33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33C844221F71D52B00545D15 /* RollingGrill.xcdatamodeld */; };
@@ -17,9 +19,13 @@
 		33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C844371F71D6DC00545D15 /* MenuViewController.swift */; };
 		33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1093E1F7EF6F600374166 /* DrinkTableViewCell.swift */; };
 		33E463E41F8580CB000F0086 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E463E31F8580CB000F0086 /* Colors.swift */; };
+		5EBD4BC74F91BA2D3549A052 /* Pods_RollingGrill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C87EB708D5D9507F7B1F979 /* Pods_RollingGrill.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C87EB708D5D9507F7B1F979 /* Pods_RollingGrill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingGrill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
+		339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		33C844181F71D52B00545D15 /* RollingGrill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollingGrill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C8441B1F71D52B00545D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +38,8 @@
 		33C844371F71D6DC00545D15 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		33D1093E1F7EF6F600374166 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		33E463E31F8580CB000F0086 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		36DC71119D94900E2943B6E2 /* Pods-RollingGrill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingGrill.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollingGrill/Pods-RollingGrill.release.xcconfig"; sourceTree = "<group>"; };
+		F40951F77049075D42C2C288 /* Pods-RollingGrill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollingGrill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollingGrill/Pods-RollingGrill.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EBD4BC74F91BA2D3549A052 /* Pods_RollingGrill.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +69,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		338B7BA21FA9303700BAB272 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		339E0D6A1FA929F700C24B05 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				338B7BA21FA9303700BAB272 /* Cell */,
+				339E0D6B1FA92ADF00C24B05 /* View */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		339E0D6B1FA92ADF00C24B05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		33C548C21FA9258A00D34899 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +107,8 @@
 			children = (
 				33C8441A1F71D52B00545D15 /* RollingGrill */,
 				33C844191F71D52B00545D15 /* Products */,
+				C524C267C8B6B9556AF867D9 /* Pods */,
+				F4F77A60354D514AEA578B1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +123,7 @@
 		33C8441A1F71D52B00545D15 /* RollingGrill */ = {
 			isa = PBXGroup;
 			children = (
+				339E0D6A1FA929F700C24B05 /* Gallery */,
 				33E463E21F8580B1000F0086 /* Resources */,
 				33C844321F71D69F00545D15 /* Menu */,
 				33C844341F71D6BF00545D15 /* Drink */,
@@ -135,6 +172,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		C524C267C8B6B9556AF867D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F40951F77049075D42C2C288 /* Pods-RollingGrill.debug.xcconfig */,
+				36DC71119D94900E2943B6E2 /* Pods-RollingGrill.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4F77A60354D514AEA578B1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C87EB708D5D9507F7B1F979 /* Pods_RollingGrill.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33C8442D1F71D52B00545D15 /* Build configuration list for PBXNativeTarget "RollingGrill" */;
 			buildPhases = (
+				453AD3D8EAACE8257E7BD74D /* [CP] Check Pods Manifest.lock */,
 				33C844141F71D52B00545D15 /* Sources */,
 				33C844151F71D52B00545D15 /* Frameworks */,
 				33C844161F71D52B00545D15 /* Resources */,
+				ABC23BDEF0F00A9A802B9F59 /* [CP] Embed Pods Frameworks */,
+				69463B9B126481EF57EA5C8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +259,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		453AD3D8EAACE8257E7BD74D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69463B9B126481EF57EA5C8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RollingGrill/Pods-RollingGrill-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABC23BDEF0F00A9A802B9F59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RollingGrill/Pods-RollingGrill-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33C844141F71D52B00545D15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -212,8 +317,10 @@
 				33C548C41FA9259D00D34899 /* MenuTableViewCell.swift in Sources */,
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
+				339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */,
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
 				33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */,
+				338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +447,7 @@
 		};
 		33C8442E1F71D52B00545D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F40951F77049075D42C2C288 /* Pods-RollingGrill.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +462,7 @@
 		};
 		33C8442F1F71D52B00545D15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DC71119D94900E2943B6E2 /* Pods-RollingGrill.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
