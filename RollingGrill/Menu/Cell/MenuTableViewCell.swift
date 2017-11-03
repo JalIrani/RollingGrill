@@ -10,9 +10,14 @@ import UIKit
 
 class MenuTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var drinkItemLabel: UILabel!
-    @IBOutlet weak var drinkPriceLabel: UILabel!
-    @IBOutlet weak var drinkDescriptionLabel: UILabel!
+    @IBOutlet weak var menuItemLabel: UILabel!
+    @IBOutlet weak var menuPriceLabel: UILabel!
+    @IBOutlet weak var menuDescriptionLabel: UILabel!
+    
+    
+//    @IBOutlet weak var drinkItemLabel: UILabel!
+//    @IBOutlet weak var drinkPriceLabel: UILabel!
+//    @IBOutlet weak var drinkDescriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

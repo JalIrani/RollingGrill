@@ -46,7 +46,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-b5-0tr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-b5-0tr">
                                                     <rect key="frame" x="8" y="4" width="287" height="21"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                                     <nil key="textColor"/>
@@ -66,9 +66,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="drinkDescriptionLabel" destination="Fax-pl-NIP" id="iUu-1g-jfo"/>
-                                            <outlet property="drinkItemLabel" destination="yB6-b5-0tr" id="7Rb-pf-a0B"/>
-                                            <outlet property="drinkPriceLabel" destination="DQH-we-zMY" id="mXm-iH-U9j"/>
+                                            <outlet property="menuDescriptionLabel" destination="Fax-pl-NIP" id="oTI-mU-5gN"/>
+                                            <outlet property="menuItemLabel" destination="yB6-b5-0tr" id="Oxi-A7-ZLG"/>
+                                            <outlet property="menuPriceLabel" destination="DQH-we-zMY" id="qKZ-SQ-aJ6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84b-FX-cpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="-860.41979010494754"/>
+            <point key="canvasLocation" x="2356" y="-860"/>
         </scene>
         <!--Drinks-->
         <scene sceneID="CsO-pu-WKi">
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-dv-d8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="-171.36431784107947"/>
+            <point key="canvasLocation" x="2356" y="-171"/>
         </scene>
         <!--About-->
         <scene sceneID="ouJ-T0-Vji">
@@ -240,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHS-Pc-ANC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2695.1999999999998" y="675.56221889055473"/>
+            <point key="canvasLocation" x="2356" y="1439"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mnh-Kw-tu7">
@@ -318,7 +318,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fG4-OF-tA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1756" y="555.47226386806597"/>
+            <point key="canvasLocation" x="1417" y="1290"/>
         </scene>
         <!--Item-->
         <scene sceneID="d4S-Bl-Kcq">
@@ -337,27 +337,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Img-Bp-NJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="1311"/>
-        </scene>
-        <!--Gallery-->
-        <scene sceneID="F0B-7g-gZh">
-            <objects>
-                <viewController id="nml-s1-GkA" customClass="GalleryViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gTc-E4-xW6"/>
-                        <viewControllerLayoutGuide type="bottom" id="tqD-1a-zWD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rhj-Rq-REs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="s5l-Aw-ZFN"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Gallery" id="MQ7-cg-uyd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aeb-9S-u8B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2383" y="1382"/>
+            <point key="canvasLocation" x="1417" y="578"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="c2E-Jg-GS8">
@@ -413,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyd-z8-LTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="1691"/>
+            <point key="canvasLocation" x="2356" y="578"/>
         </scene>
     </scenes>
     <resources>

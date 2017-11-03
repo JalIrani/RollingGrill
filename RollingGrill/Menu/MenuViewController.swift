@@ -12,13 +12,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var menuTableView: UITableView!
     
-    var drinkItemArray = ["this is the longest drink name of all time so im gonna see where it goes", "Heiniken", "Sangria", "Coor Lite", "Miller Lite"]
-    var drinkPriceArray = ["12.99", "4.99", "7.50", "1.50", "2.25"]
-    var drinkDescriptionArray = ["This is mixed with all of your favorite tequila including don julio and patron coffee", "its beer", "its soft", "its beer", "i love miller lite"]
+    var menuItemArray = ["this is the longest drink name of all time so im gonna see where it goes", "Heiniken", "Sangria", "Coor Lite", "Miller Lite"]
+    var menuPriceArray = ["12.99", "4.99", "7.50", "1.50", "2.25"]
+    var menuDescriptionArray = ["This is mixed with all of your favorite tequila including don julio and patron coffee", "its beer", "its soft", "its beer", "i love miller lite"]
     
-    fileprivate var filteredDrinkItem = [String]()
-    fileprivate var filteredDrinkPrice = [String]()
-    fileprivate var filteredDrinkDescription = [String]()
+    fileprivate var filteredMenuItem = [String]()
+    fileprivate var filteredMenuPrice = [String]()
+    fileprivate var filteredMenuDescription = [String]()
     fileprivate var filterring = false
     
     // RGB values for Big text: R:117 G:111 B:99
@@ -40,24 +40,24 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filterring ? self.filteredDrinkItem.count : drinkItemArray.count
+        return self.filterring ? self.filteredMenuItem.count : menuItemArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MenuTableViewCell
         if self.filterring {
-            cell.drinkItemLabel.text = self.filteredDrinkItem[indexPath.row]
-            cell.drinkPriceLabel.text = self.filteredDrinkPrice[indexPath.row]
-            cell.drinkDescriptionLabel.text = self.filteredDrinkDescription[indexPath.row]
+            cell.menuItemLabel.text = self.filteredMenuItem[indexPath.row]
+            cell.menuPriceLabel.text = self.filteredMenuPrice[indexPath.row]
+            cell.menuDescriptionLabel.text = self.filteredMenuDescription[indexPath.row]
         } else {
-            cell.drinkItemLabel.text = drinkItemArray[indexPath.row]
-            cell.drinkPriceLabel.text = "$" + drinkPriceArray[indexPath.row]
-            cell.drinkDescriptionLabel.text = drinkDescriptionArray[indexPath.row]
+            cell.menuItemLabel.text = menuItemArray[indexPath.row]
+            cell.menuPriceLabel.text = "$" + menuPriceArray[indexPath.row]
+            cell.menuDescriptionLabel.text = menuDescriptionArray[indexPath.row]
         }
         
-        cell.drinkItemLabel.textColor? = .itemName
-        cell.drinkPriceLabel.textColor? = .itemName
-        cell.drinkDescriptionLabel.textColor? = .itemName
+        cell.menuItemLabel.textColor? = .itemName
+        cell.menuPriceLabel.textColor? = .itemName
+        cell.menuDescriptionLabel.textColor? = .itemName
         return cell
     }
     
@@ -75,10 +75,10 @@ extension MenuViewController: UISearchResultsUpdating {
         if let text = searchController.searchBar.text, !text.isEmpty {
             var index = 0
             var counter = 0
-            self.filteredDrinkItem = self.drinkItemArray.filter({ (drink) -> Bool in
+            self.filteredMenuItem = self.menuItemArray.filter({ (drink) -> Bool in
                 if drink.lowercased().contains(text.lowercased()) {
-                    filteredDrinkPrice.insert("$" + self.drinkPriceArray[index], at: counter)
-                    filteredDrinkDescription.insert(self.drinkDescriptionArray[index], at: counter)
+                    filteredMenuPrice.insert("$" + self.menuPriceArray[index], at: counter)
+                    filteredMenuDescription.insert(self.menuDescriptionArray[index], at: counter)
                     counter = counter + 1
                 }
                 index = index + 1
@@ -88,9 +88,9 @@ extension MenuViewController: UISearchResultsUpdating {
         }
         else {
             self.filterring = false
-            self.filteredDrinkItem = [String]()
-            self.filteredDrinkPrice = [String]()
-            self.filteredDrinkDescription = [String]()
+            self.filteredMenuItem = [String]()
+            self.filteredMenuPrice = [String]()
+            self.filteredMenuDescription = [String]()
         }
         self.menuTableView.reloadData()
     }
