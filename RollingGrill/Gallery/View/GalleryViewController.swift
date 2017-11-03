@@ -16,14 +16,27 @@ class GalleryViewController: UIViewController {
     
     var useCustomOverlay = false
     
+    //            INSPhoto(imageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg"), thumbnailImageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg")),
+    //            INSPhoto(imageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg"), thumbnailImageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg")),
+    //            INSPhoto(imageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg"), thumbnailImageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg"))
+    //            INSPhoto(imageURL: URL(string: "http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/16122719_1181034925345942_4797100224747143168_n.jpg?ig_cache_key=MTQzMTE2MjA4NzIzMzAyMTY1MA%3D%3D.2"), thumbnailImage: UIImage(named: "thumbnailImage")),
+    
     lazy var photos: [INSPhotoViewable] = {
         return [
-            INSPhoto(imageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/13-3f15416ddd11d38619289335fafd498d.jpg"), thumbnailImage: UIImage(named: "thumbnailImage")),
-            INSPhoto(imageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/13-3f15416ddd11d38619289335fafd498d.jpg"), thumbnailImage: UIImage(named: "thumbnailImage")!),
-            INSPhoto(image: UIImage(named: "fullSizeImage")!, thumbnailImage: UIImage(named: "thumbnailImage")!),
-            INSPhoto(imageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg"), thumbnailImageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg")),
-            INSPhoto(imageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg"), thumbnailImageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg")),
-            INSPhoto(imageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg"), thumbnailImageURL: URL(string: "http://inspace.io/assets/portfolio/thumb/6-d793b947f57cc3df688eeb1d36b04ddb.jpg"))
+            INSPhoto(image: UIImage(named: "1FullSize")!, thumbnailImage: UIImage(named: "1FullSize")!),
+            INSPhoto(image: UIImage(named: "2FullSize")!, thumbnailImage: UIImage(named: "2FullSize")!),
+            INSPhoto(image: UIImage(named: "3FullSize")!, thumbnailImage: UIImage(named: "3FullSize")!),
+            INSPhoto(image: UIImage(named: "4FullSize")!, thumbnailImage: UIImage(named: "4FullSize")!),
+            INSPhoto(image: UIImage(named: "5FullSize")!, thumbnailImage: UIImage(named: "5FullSize")!),
+            INSPhoto(image: UIImage(named: "6FullSize")!, thumbnailImage: UIImage(named: "6FullSize")!),
+            INSPhoto(image: UIImage(named: "7FullSize")!, thumbnailImage: UIImage(named: "7FullSize")!),
+            INSPhoto(image: UIImage(named: "8FullSize")!, thumbnailImage: UIImage(named: "8FullSize")!),
+            INSPhoto(image: UIImage(named: "9FullSize")!, thumbnailImage: UIImage(named: "9FullSize")!),
+            INSPhoto(image: UIImage(named: "10FullSize")!, thumbnailImage: UIImage(named: "10FullSize")!),
+            INSPhoto(image: UIImage(named: "11FullSize")!, thumbnailImage: UIImage(named: "11FullSize")!),
+            INSPhoto(image: UIImage(named: "12FullSize")!, thumbnailImage: UIImage(named: "12FullSize")!),
+            INSPhoto(image: UIImage(named: "13FullSize")!, thumbnailImage: UIImage(named: "13FullSize")!),
+            INSPhoto(image: UIImage(named: "14FullSize")!, thumbnailImage: UIImage(named: "14FullSize")!)
             
         ]
     }()
@@ -33,15 +46,15 @@ class GalleryViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        for photo in photos {
-            if let photo = photo as? INSPhoto {
-                #if swift(>=4.0)
-                    photo.attributedTitle = NSAttributedString(string: "Example caption text\ncaption text", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-                #else
-                    photo.attributedTitle = NSAttributedString(string: "Example caption text\ncaption text", attributes: [NSForegroundColorAttributeName: UIColor.white])
-                #endif
-            }
-        }
+//        for photo in photos {
+//            if let photo = photo as? INSPhoto {
+//                #if swift(>=4.0)
+//                    photo.attributedTitle = NSAttributedString(string: "Example caption text\ncaption text", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//                #else
+//                    photo.attributedTitle = NSAttributedString(string: "Example caption text\ncaption text", attributes: [NSForegroundColorAttributeName: UIColor.white])
+//                #endif
+//            }
+//        }
     }
     
 

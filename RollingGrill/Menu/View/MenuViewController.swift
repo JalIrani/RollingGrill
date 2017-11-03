@@ -12,9 +12,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var menuTableView: UITableView!
     
-    var menuItemArray = ["this is the longest drink name of all time so im gonna see where it goes", "Heiniken", "Sangria", "Coor Lite", "Miller Lite"]
-    var menuPriceArray = ["12.99", "4.99", "7.50", "1.50", "2.25"]
-    var menuDescriptionArray = ["This is mixed with all of your favorite tequila including don julio and patron coffee", "its beer", "its soft", "its beer", "i love miller lite"]
+    var sections = ["Starters", "Platters for Delivery"]
+    
+    var menuItemArray = ["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"]
+    var menuPriceArray = ["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"]
+    var menuDescriptionArray = ["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"]
     
     fileprivate var filteredMenuItem = [String]()
     fileprivate var filteredMenuPrice = [String]()

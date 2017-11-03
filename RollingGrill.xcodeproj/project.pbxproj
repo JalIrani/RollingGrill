@@ -69,6 +69,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		336075701FACBDFB009BBE11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33C844371F71D6DC00545D15 /* MenuViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		338B7BA21FA9303700BAB272 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,8 +88,8 @@
 		339E0D6A1FA929F700C24B05 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				338B7BA21FA9303700BAB272 /* Cell */,
 				339E0D6B1FA92ADF00C24B05 /* View */,
+				338B7BA21FA9303700BAB272 /* Cell */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -123,11 +131,11 @@
 		33C8441A1F71D52B00545D15 /* RollingGrill */ = {
 			isa = PBXGroup;
 			children = (
-				339E0D6A1FA929F700C24B05 /* Gallery */,
-				33E463E21F8580B1000F0086 /* Resources */,
 				33C844321F71D69F00545D15 /* Menu */,
 				33C844341F71D6BF00545D15 /* Drink */,
+				339E0D6A1FA929F700C24B05 /* Gallery */,
 				331F0CAC1FA7AFE200586361 /* Connect */,
+				33E463E21F8580B1000F0086 /* Resources */,
 				33C844301F71D64700545D15 /* Main.storyboard */,
 				33C8441B1F71D52B00545D15 /* AppDelegate.swift */,
 				33C844251F71D52B00545D15 /* Assets.xcassets */,
@@ -141,8 +149,8 @@
 		33C844321F71D69F00545D15 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				336075701FACBDFB009BBE11 /* View */,
 				33C548C21FA9258A00D34899 /* Cell */,
-				33C844371F71D6DC00545D15 /* MenuViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
