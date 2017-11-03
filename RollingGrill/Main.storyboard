@@ -347,9 +347,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0uF-1m-V9j">
-                                <rect key="frame" x="0.0" y="24" width="375" height="618"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0uF-1m-V9j">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Jix-mE-pfW">
                                     <size key="itemSize" width="180" height="145"/>
@@ -384,6 +383,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0uF-1m-V9j" firstAttribute="bottom" secondItem="Oa6-J0-KTh" secondAttribute="bottom" constant="49" id="6I0-cw-nnC"/>
+                            <constraint firstItem="Oa6-J0-KTh" firstAttribute="top" secondItem="0uF-1m-V9j" secondAttribute="top" constant="64" id="InU-zj-09Z"/>
+                            <constraint firstItem="Oa6-J0-KTh" firstAttribute="trailing" secondItem="0uF-1m-V9j" secondAttribute="trailing" id="Y0R-8r-O20"/>
+                            <constraint firstItem="0uF-1m-V9j" firstAttribute="leading" secondItem="Oa6-J0-KTh" secondAttribute="leading" id="v9S-qQ-3pS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Oa6-J0-KTh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Gallery" id="07B-lF-jgc"/>
@@ -393,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyd-z8-LTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="578"/>
+            <point key="canvasLocation" x="2356" y="577.9610194902549"/>
         </scene>
     </scenes>
     <resources>
