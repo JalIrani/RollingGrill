@@ -14,9 +14,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var sections = ["Starters", "Platters for Delivery"]
     
-    var menuItemArray = ["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"]
-    var menuPriceArray = ["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"]
-    var menuDescriptionArray = ["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"]
+    var menuItemsSectioned = [["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"], ["something"]]
+    var menuPricesSectioned = [["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"], ["2.99"]]
+    var menuDescriptionsSectioned = [["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"], ["Keep feedin em"]]
+    
+    var menuItemArray = [String]()
+    var menuPriceArray = [String]()
+    var menuDescriptionArray = [String]()
     
     fileprivate var filteredMenuItem = [String]()
     fileprivate var filteredMenuPrice = [String]()
@@ -34,6 +38,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self as UISearchResultsUpdating
         self.navigationItem.searchController = search
+        menuItemArray = Array(menuItemsSectioned.joined())
+        menuPriceArray = Array(menuPricesSectioned.joined())
+        menuDescriptionArray = Array(menuDescriptionsSectioned.joined())
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,19 +49,20 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filterring ? self.filteredMenuItem.count : menuItemArray.count
+        return self.filterring ? self.filteredMenuItem.count : menuItemsSectioned[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MenuTableViewCell
         if self.filterring {
+            //self.items[indexPath.section][indexPath.row]
             cell.menuItemLabel.text = self.filteredMenuItem[indexPath.row]
             cell.menuPriceLabel.text = self.filteredMenuPrice[indexPath.row]
             cell.menuDescriptionLabel.text = self.filteredMenuDescription[indexPath.row]
         } else {
-            cell.menuItemLabel.text = menuItemArray[indexPath.row]
-            cell.menuPriceLabel.text = "$" + menuPriceArray[indexPath.row]
-            cell.menuDescriptionLabel.text = menuDescriptionArray[indexPath.row]
+            cell.menuItemLabel.text = menuItemsSectioned[indexPath.section][indexPath.row]
+            cell.menuPriceLabel.text = "$" + menuPricesSectioned[indexPath.section][indexPath.row]
+            cell.menuDescriptionLabel.text = menuDescriptionsSectioned[indexPath.section][indexPath.row]
         }
         
         cell.menuItemLabel.textColor? = .itemName
@@ -69,6 +77,15 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.filterring ? 1 : sections.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.filterring ? "Filtered Results" : sections[section]
+        
     }
 }
 

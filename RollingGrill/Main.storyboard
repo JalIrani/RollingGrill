@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Menu-->
+        <!--Catering-->
         <scene sceneID="kYN-1V-0U7">
             <objects>
                 <viewController id="ztc-pT-Fbw" customClass="MenuViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qbU-JD-pt5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" id="AIV-rn-tKt"/>
+                    <navigationItem key="navigationItem" title="Catering" id="AIV-rn-tKt"/>
                     <connections>
                         <outlet property="menuTableView" destination="S4E-iA-878" id="bMN-l7-JPa"/>
                     </connections>
@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="2356" y="-860"/>
         </scene>
-        <!--Drinks-->
+        <!--Menu-->
         <scene sceneID="CsO-pu-WKi">
             <objects>
                 <viewController id="ya9-ND-7uh" customClass="DrinkViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t8P-aI-Eg2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Drinks" id="moB-aC-Aif"/>
+                    <navigationItem key="navigationItem" title="Menu" id="moB-aC-Aif"/>
                     <connections>
                         <outlet property="drinkTableView" destination="bL4-0x-Of6" id="bfM-MP-dNE"/>
                     </connections>

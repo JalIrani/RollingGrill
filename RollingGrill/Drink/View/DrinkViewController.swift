@@ -12,9 +12,9 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var drinkTableView: UITableView!
     
-    var drinkItemArray = ["this is the longest drink name of all time so im gonna see where it goes", "Heiniken", "Sangria", "Coor Lite", "Miller Lite"]
-    var drinkPriceArray = ["12.99", "4.99", "7.50", "1.50", "2.25"]
-    var drinkDescriptionArray = ["This is mixed with all of your favorite tequila including don julio and patron coffee", "its beer", "its soft", "its beer", "i love miller lite"]
+    var drinkItemArray = ["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"]
+    var drinkPriceArray = ["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"]
+    var drinkDescriptionArray = ["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"]
     
     fileprivate var filteredDrinkItem = [String]()
     fileprivate var filteredDrinkPrice = [String]()
