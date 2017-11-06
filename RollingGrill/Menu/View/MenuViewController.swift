@@ -43,6 +43,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         menuDescriptionArray = Array(menuDescriptionsSectioned.joined())
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //probabaly move - check if from filtered page or not
+//        menuItemArray = Array(menuItemsSectioned.joined())
+//        menuPriceArray = Array(menuPricesSectioned.joined())
+//        menuDescriptionArray = Array(menuDescriptionsSectioned.joined())
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
