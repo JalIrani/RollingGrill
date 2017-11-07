@@ -348,28 +348,28 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qiz-3a-pww">
-                                                <rect key="frame" x="160" y="383" width="46" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qiz-3a-pww">
+                                                <rect key="frame" x="170" y="384" width="34" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="twitter"/>
+                                                <state key="normal" title="twitter" image="twitter"/>
                                                 <connections>
                                                     <action selector="twitterTapped:" destination="mlV-AC-v0h" eventType="touchUpInside" id="TWZ-hi-58x"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIs-E2-3wT">
-                                                <rect key="frame" x="238" y="383" width="71" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbq-vT-tCD">
+                                                <rect key="frame" x="109" y="384" width="35" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="instagram"/>
-                                                <connections>
-                                                    <action selector="instagramTapped:" destination="mlV-AC-v0h" eventType="touchUpInside" id="DM5-1p-bWB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbq-vT-tCD">
-                                                <rect key="frame" x="83" y="383" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="fbook"/>
+                                                <state key="normal" title="fbook" image="facebook"/>
                                                 <connections>
                                                     <action selector="facebookTapped:" destination="mlV-AC-v0h" eventType="touchUpInside" id="eH2-b0-Jft"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czm-Cy-VMy">
+                                                <rect key="frame" x="30" y="348" width="99" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="410-302-1727"/>
+                                                <connections>
+                                                    <action selector="phoneNumberTapped:" destination="mlV-AC-v0h" eventType="touchUpInside" id="GNs-Pk-vkv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNu-0n-0D8">
@@ -380,12 +380,12 @@
                                                     <action selector="emailTapped:" destination="mlV-AC-v0h" eventType="touchUpInside" id="DRB-zB-dBX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czm-Cy-VMy">
-                                                <rect key="frame" x="30" y="348" width="99" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIs-E2-3wT">
+                                                <rect key="frame" x="232" y="384" width="32" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="410-302-1727"/>
+                                                <state key="normal" title="instagram" image="instagram"/>
                                                 <connections>
-                                                    <action selector="phoneNumberTapped:" destination="mlV-AC-v0h" eventType="touchUpInside" id="GNs-Pk-vkv"/>
+                                                    <action selector="instagramTapped:" destination="mlV-AC-v0h" eventType="touchUpInside" id="DM5-1p-bWB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -586,5 +586,8 @@
     </scenes>
     <resources>
         <image name="Lotz" width="848" height="1254"/>
+        <image name="facebook" width="29" height="29"/>
+        <image name="instagram" width="29" height="29"/>
+        <image name="twitter" width="29" height="29"/>
     </resources>
 </document>
