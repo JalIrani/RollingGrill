@@ -12,6 +12,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var menuTableView: UITableView!
     
+    var filterSection = [String]()
+    
     var sections = ["Starters", "Platters for Delivery"]
     
     var menuItemsSectioned = [["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"], ["something"]]
@@ -93,6 +95,22 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.filterring ? "Filtered Results" : sections[section]
         
+    }
+    
+    @IBAction func unwindFilter(_ sender: UIStoryboardSegue) {
+        if sender.source is MenuFilterViewController {
+            if let filterVC = sender.source as? MenuFilterViewController {
+                print(filterVC.selectedFilter)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "filterSections" {
+            if let secondController = segue.destination as? MenuFilterViewController {
+                secondController.sectionsFilter = self.sections
+            }
+        }
     }
 }
 

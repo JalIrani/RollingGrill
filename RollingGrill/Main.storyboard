@@ -87,7 +87,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qbU-JD-pt5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Catering" id="AIV-rn-tKt"/>
+                    <navigationItem key="navigationItem" title="Catering" id="AIV-rn-tKt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="FKo-6f-u8v">
+                            <connections>
+                                <segue destination="Uen-BK-oAL" kind="show" identifier="filterSections" id="3vd-Ag-xtz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="menuTableView" destination="S4E-iA-878" id="bMN-l7-JPa"/>
                     </connections>
@@ -95,6 +101,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84b-FX-cpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2356" y="-860"/>
+        </scene>
+        <!--Filter-->
+        <scene sceneID="Nao-r6-FsS">
+            <objects>
+                <viewController id="Uen-BK-oAL" customClass="MenuFilterViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9gF-QH-6f9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="IPP-zE-JAT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="filterCell" id="LqP-2k-uhN">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LqP-2k-uhN" id="0fF-qH-FLX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Uen-BK-oAL" id="Qvj-dO-spn"/>
+                                    <outlet property="delegate" destination="Uen-BK-oAL" id="Qk7-qI-cea"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IPP-zE-JAT" firstAttribute="leading" secondItem="0CP-po-Sx4" secondAttribute="leading" id="1eG-zQ-sCy"/>
+                            <constraint firstItem="IPP-zE-JAT" firstAttribute="bottom" secondItem="0CP-po-Sx4" secondAttribute="bottom" constant="49" id="GS7-FC-PJR"/>
+                            <constraint firstItem="0CP-po-Sx4" firstAttribute="top" secondItem="IPP-zE-JAT" secondAttribute="top" constant="64" id="IQz-Es-Lhe"/>
+                            <constraint firstItem="0CP-po-Sx4" firstAttribute="trailing" secondItem="IPP-zE-JAT" secondAttribute="trailing" id="baD-73-lh6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0CP-po-Sx4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filter" id="9Jo-WJ-rze">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="shq-RC-uUW">
+                            <connections>
+                                <segue destination="QRN-FW-yuE" kind="unwind" unwindAction="unwindFilter:" id="4Ul-Ef-l6h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Avb-EH-ME3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QRN-FW-yuE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3257" y="-860"/>
         </scene>
         <!--Menu-->
         <scene sceneID="CsO-pu-WKi">
