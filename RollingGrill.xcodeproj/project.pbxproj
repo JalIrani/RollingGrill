@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C3D021FB15768001CCEFF /* ConnectViewController.swift */; };
+		333179261FB221C900F1D5DE /* DrinkFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */; };
 		33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33403D261FB0D44400016D78 /* MenuFilterViewController.swift */; };
 		338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */; };
 		339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		0C87EB708D5D9507F7B1F979 /* Pods_RollingGrill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingGrill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		331C3D021FB15768001CCEFF /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilterViewController.swift; sourceTree = "<group>"; };
 		33403D261FB0D44400016D78 /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
 		338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,22 @@
 			isa = PBXGroup;
 			children = (
 				33C844351F71D6D100545D15 /* DrinkViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		333179231FB221AC00F1D5DE /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				333179241FB221B800F1D5DE /* View */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		333179241FB221B800F1D5DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +206,7 @@
 		33C844341F71D6BF00545D15 /* Drink */ = {
 			isa = PBXGroup;
 			children = (
+				333179231FB221AC00F1D5DE /* Filter */,
 				331F0CAF1FA7B54400586361 /* View */,
 				33D1093D1F7EF6CF00374166 /* Cell */,
 			);
@@ -361,6 +380,7 @@
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
 				33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */,
 				338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */,
+				333179261FB221C900F1D5DE /* DrinkFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
