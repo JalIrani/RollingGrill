@@ -11,6 +11,9 @@ import MapKit
 
 class ConnectViewController: UIViewController {
 
+    @IBOutlet weak var whereItAllBegan: UILabel!
+    @IBOutlet weak var summaryTextView: UITextView!
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
@@ -44,7 +47,70 @@ class ConnectViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func phoneNumberTapped(_ sender: Any) {
+        let phoneURL = URL(string: "tel://4103021727")!
+        let application = UIApplication.shared
+        
+        if (application.canOpenURL(phoneURL)) {
+            application.open(phoneURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @IBAction func emailTapped(_ sender: Any) {
+        let email = "therollinggrill@gmail.com"
+        let emailURL = URL(string: "mailto:\(email)")!
+        
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(emailURL) {
+            application.open(emailURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @IBAction func facebookTapped(_ sender: Any) {
+        let screenName =  "thegrill56"
+        let appURL = URL(string: "fb://profile/\(screenName)")!
+        let webURL = URL(string: "https://facebook.com/\(screenName)")!
+        
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL, options: [:], completionHandler: nil)
+        } else {
+            application.open(webURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @IBAction func twitterTapped(_ sender: Any) {
+        let screenName =  "rollinggrill"
+        let appURL = URL(string: "twitter://user?screen_name=\(screenName)")!
+        let webURL = URL(string: "https://twitter.com/\(screenName)")!
+        
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL, options: [:], completionHandler: nil)
+        } else {
+            application.open(webURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @IBAction func instagramTapped(_ sender: Any) {
+        let userName =  "therollinggrill"
+        let appURL = URL(string: "instagram://user?username=\(userName)")!
+        let webURL = URL(string: "https://instagram.com/\(userName)")!
+        
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL, options: [:], completionHandler: nil)
+        } else {
+            application.open(webURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
