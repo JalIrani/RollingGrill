@@ -18,11 +18,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var menuPricesSectionedFilter = [[String]]()
     var menuDescriptionsSectionedFilter = [[String]]()
     
-    var sections = ["Starters", "Platters for Delivery", "poop"]
+    var sections = ["Starters", "Platters for Delivery", "Backyard BBQ", "Banquet Style Entrees", "Sides", "Raw Oysters", "Desserts", "Drinks"]
     
-    var menuItemsSectioned = [["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"], ["something"], []]
-    var menuPricesSectioned = [["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"], ["2.99"], []]
-    var menuDescriptionsSectioned = [["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"], ["Keep feedin em"], []]
+    var menuItemsSectioned = [["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"], ["something"], [], [], [], [], [], []]
+    var menuPricesSectioned = [["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"], ["2.99"], [], [], [], [], [], []]
+    var menuDescriptionsSectioned = [["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"], ["Keep feedin em"], [], [], [], [], [], []]
     
     var menuItemArray = [String]()
     var menuPriceArray = [String]()
@@ -65,10 +65,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             menuDescriptionsSectionedFilter = [[String]]()
         }
         menuTableView.reloadData()
-        //probabaly move - check if from filtered page or not
-//        menuItemArray = Array(menuItemsSectioned.joined())
-//        menuPriceArray = Array(menuPricesSectioned.joined())
-//        menuDescriptionArray = Array(menuDescriptionsSectioned.joined())
     }
     
     override func didReceiveMemoryWarning() {

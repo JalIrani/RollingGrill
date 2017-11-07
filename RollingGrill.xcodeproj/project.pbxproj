@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C3D021FB15768001CCEFF /* ConnectViewController.swift */; };
 		33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33403D261FB0D44400016D78 /* MenuFilterViewController.swift */; };
 		338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */; };
 		339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0C87EB708D5D9507F7B1F979 /* Pods_RollingGrill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingGrill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		331C3D021FB15768001CCEFF /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		33403D261FB0D44400016D78 /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
 		338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +58,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		331C3D011FB15752001CCEFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				331C3D021FB15768001CCEFF /* ConnectViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		331F0CAC1FA7AFE200586361 /* Connect */ = {
 			isa = PBXGroup;
 			children = (
+				331C3D011FB15752001CCEFF /* View */,
 			);
 			path = Connect;
 			sourceTree = "<group>";
@@ -343,6 +354,7 @@
 				33E463E41F8580CB000F0086 /* Colors.swift in Sources */,
 				33C548C41FA9259D00D34899 /* MenuTableViewCell.swift in Sources */,
 				33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */,
+				331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */,
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
 				339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */,
