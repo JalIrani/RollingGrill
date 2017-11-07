@@ -141,7 +141,7 @@
                     <navigationItem key="navigationItem" title="Filter" id="9Jo-WJ-rze">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="shq-RC-uUW">
                             <connections>
-                                <segue destination="QRN-FW-yuE" kind="unwind" unwindAction="unwindFilter:" id="4Ul-Ef-l6h"/>
+                                <segue destination="QRN-FW-yuE" kind="unwind" unwindAction="unwindFilter:" id="DEl-DR-txq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

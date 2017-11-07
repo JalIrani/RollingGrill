@@ -12,13 +12,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var menuTableView: UITableView!
     
-    var filterSection = [String]()
+    var filterSection = ["None"]
+    var filterSectionIndex = -1
+    var menuItemsSectionedFilter = [[String]]()
+    var menuPricesSectionedFilter = [[String]]()
+    var menuDescriptionsSectionedFilter = [[String]]()
     
-    var sections = ["Starters", "Platters for Delivery"]
+    var sections = ["Starters", "Platters for Delivery", "poop"]
     
-    var menuItemsSectioned = [["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"], ["something"]]
-    var menuPricesSectioned = [["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"], ["2.99"]]
-    var menuDescriptionsSectioned = [["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"], ["Keep feedin em"]]
+    var menuItemsSectioned = [["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"], ["something"], []]
+    var menuPricesSectioned = [["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"], ["2.99"], []]
+    var menuDescriptionsSectioned = [["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"], ["Keep feedin em"], []]
     
     var menuItemArray = [String]()
     var menuPriceArray = [String]()
@@ -40,12 +44,27 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self as UISearchResultsUpdating
         self.navigationItem.searchController = search
-        menuItemArray = Array(menuItemsSectioned.joined())
-        menuPriceArray = Array(menuPricesSectioned.joined())
-        menuDescriptionArray = Array(menuDescriptionsSectioned.joined())
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("In view will appear:" + filterSection[0])
+        if self.filterSection[0] != "None" {
+            menuItemsSectionedFilter.insert(self.menuItemsSectioned[filterSectionIndex], at: 0)
+            menuPricesSectionedFilter.insert(self.menuPricesSectioned[filterSectionIndex], at: 0)
+            menuDescriptionsSectionedFilter.insert(self.menuDescriptionsSectioned[filterSectionIndex], at: 0)
+            menuItemArray = Array(menuItemsSectionedFilter.joined())
+            menuPriceArray = Array(menuPricesSectionedFilter.joined())
+            menuDescriptionArray = Array(menuDescriptionsSectionedFilter.joined())
+            print(menuItemArray)
+        } else {
+            menuItemArray = Array(menuItemsSectioned.joined())
+            menuPriceArray = Array(menuPricesSectioned.joined())
+            menuDescriptionArray = Array(menuDescriptionsSectioned.joined())
+            menuItemsSectionedFilter = [[String]]()
+            menuPricesSectionedFilter = [[String]]()
+            menuDescriptionsSectionedFilter = [[String]]()
+        }
+        menuTableView.reloadData()
         //probabaly move - check if from filtered page or not
 //        menuItemArray = Array(menuItemsSectioned.joined())
 //        menuPriceArray = Array(menuPricesSectioned.joined())
@@ -58,20 +77,37 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filterring ? self.filteredMenuItem.count : menuItemsSectioned[section].count
+        if self.filterSection[0] != "None" {
+            return self.filterring ? self.filteredMenuItem.count : menuItemsSectionedFilter[section].count
+        } else {
+            return self.filterring ? self.filteredMenuItem.count : menuItemsSectioned[section].count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MenuTableViewCell
-        if self.filterring {
-            //self.items[indexPath.section][indexPath.row]
-            cell.menuItemLabel.text = self.filteredMenuItem[indexPath.row]
-            cell.menuPriceLabel.text = self.filteredMenuPrice[indexPath.row]
-            cell.menuDescriptionLabel.text = self.filteredMenuDescription[indexPath.row]
+        if self.filterSection[0] != "None" {
+            if self.filterring {
+                //self.items[indexPath.section][indexPath.row]
+                cell.menuItemLabel.text = self.filteredMenuItem[indexPath.row]
+                cell.menuPriceLabel.text = self.filteredMenuPrice[indexPath.row]
+                cell.menuDescriptionLabel.text = self.filteredMenuDescription[indexPath.row]
+            } else {
+                cell.menuItemLabel.text = menuItemsSectionedFilter[indexPath.section][indexPath.row]
+                cell.menuPriceLabel.text = "$" + menuPricesSectionedFilter[indexPath.section][indexPath.row]
+                cell.menuDescriptionLabel.text = menuDescriptionsSectionedFilter[indexPath.section][indexPath.row]
+            }
         } else {
-            cell.menuItemLabel.text = menuItemsSectioned[indexPath.section][indexPath.row]
-            cell.menuPriceLabel.text = "$" + menuPricesSectioned[indexPath.section][indexPath.row]
-            cell.menuDescriptionLabel.text = menuDescriptionsSectioned[indexPath.section][indexPath.row]
+            if self.filterring {
+                //self.items[indexPath.section][indexPath.row]
+                cell.menuItemLabel.text = self.filteredMenuItem[indexPath.row]
+                cell.menuPriceLabel.text = self.filteredMenuPrice[indexPath.row]
+                cell.menuDescriptionLabel.text = self.filteredMenuDescription[indexPath.row]
+            } else {
+                cell.menuItemLabel.text = menuItemsSectioned[indexPath.section][indexPath.row]
+                cell.menuPriceLabel.text = "$" + menuPricesSectioned[indexPath.section][indexPath.row]
+                cell.menuDescriptionLabel.text = menuDescriptionsSectioned[indexPath.section][indexPath.row]
+            }
         }
         
         cell.menuItemLabel.textColor? = .itemName
@@ -89,18 +125,29 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.filterring ? 1 : sections.count
+        if self.filterring || self.filterSection[0] != "None" {
+            return 1
+        } else {
+            return sections.count
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.filterring ? "Filtered Results" : sections[section]
-        
+        if self.filterring {
+            return "Filtered Results"
+        } else if self.filterSection[0] != "None" {
+            return filterSection[0]
+        }
+        else {
+             return sections[section]
+        }
     }
     
     @IBAction func unwindFilter(_ sender: UIStoryboardSegue) {
         if sender.source is MenuFilterViewController {
             if let filterVC = sender.source as? MenuFilterViewController {
-                print(filterVC.selectedFilter)
+                self.filterSection[0] = filterVC.selectedFilter
+                self.filterSectionIndex = filterVC.selectedIndex
             }
         }
     }
