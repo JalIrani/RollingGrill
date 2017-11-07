@@ -18,11 +18,41 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var menuPricesSectionedFilter = [[String]]()
     var menuDescriptionsSectionedFilter = [[String]]()
     
-    var sections = ["Starters", "Platters for Delivery", "Backyard BBQ", "Banquet Style Entrees", "Sides", "Raw Oysters", "Desserts", "Drinks"]
+    var sections = ["Starters", "Platters for Delivery", "Backyard BBQ", "Banquet Style Entrees", "Sides", "Raw Oysters", "Desserts", "Drinks", "Bartending Service"]
     
-    var menuItemsSectioned = [["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter"], ["something"], [], [], [], [], [], []]
-    var menuPricesSectioned = [["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95"], ["2.99"], [], [], [], [], [], []]
-    var menuDescriptionsSectioned = [["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people"], ["Keep feedin em"], [], [], [], [], [], []]
+    var menuItemsSectioned = [
+        ["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter", "Maryland Style Crab Balls", "Maryland Style Crab Balls", "Maryland Style Crab Balls", "Maryland Style Crab Balls", "Maryland Style Crab Balls", "Maryland Style Crab Balls"],
+        ["Deli Platter - 12 Sandwiches", "Deli Platter - 24 Sandwiches", "Deli Platter - 48 Sandwiches", "Deli Platter - 100 Sandwiches", "Salad Platter - 12 Sandwiches", "Salad Platter - 24 Sandwiches", "Salad Platter - 48 Sandwiches", "Salad Platter - 100 Sandwiches", "Wing Platter - 50 Wings", "Wing Platter - 100 Wings"],
+        ["Pit Beef", "Pit Turkey", "Pit Ham", "Roma Italian Sausage with Peppers and Onions", "Chicken Breast", "Angus Burger", "All Beef Hot Dog"],
+        ["Bourbon BBQ Chicken", "Roast Beef Au Jus", "Shrimp Creole", "Broiled Salmon", "Penne Italiano"],
+        ["Steamed Asparagus", "Fresh Green Beans", "Vegetable Medley", "Roasted Red Potatoes", "Coleslaw", "Baked Beans", "Potato Salad", "Pasta Salad", "Mac and Cheese", "Caesar Salad"],
+        ["Delaware Bays - 100ct.", "Blue Points - 100ct."],
+        ["Assorted Fruited Mini Cheesecakes 1 oz.", "Mini Black Bottoms", "9\" Cheesecakes- 12 Slices", "9\" Gourmet Cakes- 12 Slices", "Large Assorted Cookie Tray", "Small Cookie Tray"],
+        ["Assorted Sodas and Bottled Water", "Fresh Squeezed Lemonade", "Sweet Iced Tea"],
+        ["Priced Per Hour (4hr minimum)"]
+    ]
+    var menuPricesSectioned = [
+        ["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95", "55.00", "110.00", "210.00", "111.00", "222.00", "420.00"],
+        ["35.00", "69.00", "135.00", "265.00", "25.00", "49.00", "95.00", "185.00", "47.95", "89.95"],
+        ["3.95", "2.95", "2.95", "3.25", "3.95", "2.50", "1.95"],
+        ["5.95", "5.95", "8.95", "10.50", "4.95"],
+        ["3.25", "2.50", "2.50", "2.50", "2.25", "2.25", "2.25", "2.25", "2.50", "1.95"],
+        ["110.00", "120.00"],
+        ["21.95", "20.95", "57.95", "57.95", "47.95", "20.95"],
+        ["2.00", "10.00", "5.00"],
+        ["25.00"]
+    ]
+    var menuDescriptionsSectioned = [
+        ["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people", "25ct- 1 oz. Balls\nServed with cocktail, tarter, and lemon", "50ct- 1 oz. Balls\nServed with cocktail, tarter, and lemon", "100ct- 1 oz. Balls\nServed with cocktail, tarter, and lemon", "25ct- 2 oz. Balls\nServed with cocktail, tarter, and lemon", "50ct- 2 oz. Balls\nServed with cocktail, tarter, and lemon", "100ct- 2 oz. Balls\nServed with cocktail, tarter, and lemon"],
+        ["Pit Beef, Pit Turkey, Pit Ham (Choice of 2) served cold", "Pit Beef, Pit Turkey, Pit Ham (Choice of 2) served cold", "Pit Beef, Pit Turkey, Pit Ham (Choice of 2) served cold", "Pit Beef, Pit Turkey, Pit Ham (Choice of 2) served cold", "Chicken and Tuna Salad", "Chicken and Tuna Salad", "Chicken and Tuna Salad", "Chicken and Tuna Salad", "Your Choice of Buffalo, BBQ, or Old Bay. Served with Celery and Ranch", "Your Choice of Buffalo, BBQ, or Old Bay. Served with Celery and Ranch"],
+        ["", "", "", "", "Your choice of BBQ or Blackened", "5 oz Patty-Fresh never frozen", ""],
+        ["Slow roasted bone-in chicken thigh topped with sautéed peppers, onions, and pineapple, finished with a bourbon bbq sauce glaze", "Roast Beef in an Au Jus topped with sautéed mushrooms and fresh herbs", "Fresh shrimp, cooked in a spicy Creole tomato sauce and served over a hot bed of steaming rice", "Broiled 8 oz. salmon filet topped with a lemon butter sauce", "Baked penne pasta with a homemade tomato sauce including sautéed peppers, onions, and Roma sausage"],
+        ["", "", "", "", "", "", "", "", "", ""],
+        ["All oysters are served with cocktail sauce and lemon. Events requiring an oyster shucker will inquire an additional fee", "All oysters are served with cocktail sauce and lemon. Events requiring an oyster shucker will inquire an additional fee"],
+        ["Priced Per Dozen", "Priced Per Dozen", "Ask about flavors!", "Ask about flavors!", "60 assorted cookies", ""],
+        ["Priced Per Person", "Served by the gallon\nPriced Per Person", "Served by the gallon\nPriced Per Person"],
+        ["All alcohol must be provided by host"]
+    ]
     
     var menuItemArray = [String]()
     var menuPriceArray = [String]()
