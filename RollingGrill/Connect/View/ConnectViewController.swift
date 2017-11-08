@@ -33,11 +33,8 @@ class ConnectViewController: UIViewController {
                     region.span.longitudeDelta /= 8.0
                     region.span.latitudeDelta /= 8.0
                     self?.mapView.setRegion(region, animated: true)
-                    //self?.mapView.addAnnotation(mark)
                     self?.mapView.showAnnotations([point], animated: true)
                 }
-//                let mapItem = MKMapItem(placemark: mark)
-//                mapItem.openInMaps(launchOptions: nil)
             }
         }
     }
@@ -109,6 +106,18 @@ class ConnectViewController: UIViewController {
         }
     }
     
+    @IBAction func addressTapped(_ sender: Any) {
+        let location = "9533 Belair Rd Nottingham, MD 21236"
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(location) { placemarks, error in
+            if let placemark = placemarks?.first {
+                let mark = MKPlacemark(placemark: placemark)
+                let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                let mapItem = MKMapItem(placemark: mark)
+                mapItem.openInMaps(launchOptions: options)
+            }
+        }
+    }
     
     
     /*
