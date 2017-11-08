@@ -44,6 +44,14 @@ class ConnectViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func websiteTapped(_ sender: Any) {
+        let websiteURL = URL(string: "https://www.therollinggrillcatering.com/")!
+        let application = UIApplication.shared
+        if (application.canOpenURL(websiteURL)) {
+            application.open(websiteURL, options: [:], completionHandler: nil)
+        }
+    }
+    
     @IBAction func phoneNumberTapped(_ sender: Any) {
         let phoneURL = URL(string: "tel://4103021727")!
         let application = UIApplication.shared
