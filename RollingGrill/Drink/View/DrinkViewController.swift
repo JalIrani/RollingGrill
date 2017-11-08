@@ -148,6 +148,14 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = UIColor.red
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .center
+    }
+    
     @IBAction func unwindFilterDrink(_ sender: UIStoryboardSegue) {
         if sender.source is DrinkFilterViewController {
             if let filterVC = sender.source as? DrinkFilterViewController {
@@ -156,6 +164,13 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     }
+    
+    @IBAction func undoTapped(_ sender: Any) {
+        filterSection[0] = "None"
+        filterSectionIndex = -1
+        drinkTableView.reloadData()
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "filterSectionsDrink" {

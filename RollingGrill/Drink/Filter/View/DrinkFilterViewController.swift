@@ -16,7 +16,6 @@ class DrinkFilterViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     override func didReceiveMemoryWarning() {

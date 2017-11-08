@@ -16,11 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-//        UISearchBar.appearance().barTintColor = .candyGreen
-//        UISearchBar.appearance().tintColor = .white
-//        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .candyGreen
-        
         return true
     }
 
