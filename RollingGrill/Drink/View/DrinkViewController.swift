@@ -18,19 +18,28 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var drinkPricesSectionedFilter = [[String]]()
     var drinkDescriptionsSectionedFilter = [[String]]()
     
-    var sections = ["Sandwiches", "cyclops"]
+    var sections = ["Sandwiches", "Specialty Sandwiches and Platters", "Lunch Special", "Sides", "Drinks"]
     
     var drinkItemsSectioned = [
-        ["Tomato Caprese Skewers", "Bacon and BBQ Infused Chicken Kabobs", "Garlic Glazed Shrimp Kabobs", "Shrimp Cocktail", "Veggie Tray", "Cheese Tray", "Fruit Salad Platter", "Maryland Style Crab Balls", "Maryland Style Crab Balls", "Maryland Style Crab Balls", "Maryland Style Crab Balls", "Maryland Style Crab Balls", "Maryland Style Crab Balls"],
-        ["poop"]
+        ["Pit Beef", "Pit Turkey", "Pit Ham", "Colossal Pit Beef (12oz)", "Roma Italian Sausage", "Two Meat Combo", "Three Meat Combo"],
+        ["The Rolling Grill", "The Rolling Club", "The Meat Market", "Pit Beef Cheese Steak", "Hot Ham and Cheese", "Pit Beef Caesar Salad"],
+        ["Choose any Pit Meat Sandwich", "Upgrade to French Fries"],
+        ["Coleslaw", "Fresh Hand Cut Fries", "Baked Beans", "Three Cheese Mac N' Cheese"],
+        ["Coke", "Diet Coke", "Sprite", "Bottled Water"]
     ]
     var drinkPricesSectioned = [
-        ["49.95", "79.95", "99.95", "16.95", "34.95", "49.95", "39.95", "55.00", "110.00", "210.00", "111.00", "222.00", "420.00"],
-        ["3.00"]
+        ["7.25", "6.25", "6.25", "10.00", "6.25", "8.25", "9.25"],
+        ["9.00", "9.50", "9.50", "9.50", "9.50", "7.50", "7.75"],
+        ["8.50", "1.50"],
+        ["2.25", "3.50", "2.25", "3.00"],
+        ["1.25", "1.25", "1.25", "1.25"]
     ]
     var drinkDescriptionsSectioned = [
-        ["Feeds up to 30 people", "Feeds up to 30 people", "Feeds up to 30 people", "Served with cocktail sauce and lemon. (Priced per pound)", "Feeds up to 30 people", "Serves 20-40 people", "Feeds up to 30 people", "25ct- 1 oz. Balls\nServed with cocktail, tarter, and lemon", "50ct- 1 oz. Balls\nServed with cocktail, tarter, and lemon", "100ct- 1 oz. Balls\nServed with cocktail, tarter, and lemon", "25ct- 2 oz. Balls\nServed with cocktail, tarter, and lemon", "50ct- 2 oz. Balls\nServed with cocktail, tarter, and lemon", "100ct- 2 oz. Balls\nServed with cocktail, tarter, and lemon"],
-        ["get some"]
+        ["Add Coleslaw to any sandwich - $1.00\nadd cheese - $.50", "Add Coleslaw to any sandwich - $1.00\nadd cheese - $.50", "Add Coleslaw to any sandwich - $1.00\nadd cheese - $.50", "Add Coleslaw to any sandwich - $1.00\nadd cheese - $.50", "With Peppers and Onions\nAdd Coleslaw to any sandwich - $1.00\nadd cheese - $.50", "Add Coleslaw to any sandwich - $1.00\nadd cheese - $.50", "Add Coleslaw to any sandwich - $1.00\nadd cheese - $.50"],
+        ["Our Pit Beef topped with melted provolone cheese, caramelized onions, coleslaw and BBQ sauce served on a toasted brioche roll", "Our Pit Beef topped with mac and cheese, BBQ sauce, house tiger sauce, caramelized onions, cheddar cheese, and bacon on a toasted brioche roll", "Our Pit Beef, Pit Turkey, Roma Sausage topped with cheddar cheese, BBQ sauce, and our house tiger sauce served on a toasted sub roll", "Our Pit Beef with sauteed peppers and onions, melted provolone cheese, lettuce, tomato, and our house tiger sauce served on a toasted sub roll", "Our Pit Ham topped with melted cheddar cheese with our house tiger sauce served on a toasted brioche roll", "Our Pit Beef over a bed of crisp romaine lettuce, parmesan cheese, croutons and caesar dressing"],
+        ["with chips and a drink", ""],
+        ["", "", "", ""],
+        ["", "", "", ""]
     ]
     
     var drinkItemArray = [String]()
