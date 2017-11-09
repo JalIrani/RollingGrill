@@ -13,6 +13,9 @@ class ConnectViewController: UIViewController {
 
     @IBOutlet weak var whereItAllBegan: UILabel!
     @IBOutlet weak var summaryTextView: UITextView!
+    @IBOutlet weak var contactUs: UILabel!
+    @IBOutlet weak var ourLocation: UILabel!
+    @IBOutlet weak var hoursOfOperation: UITextView!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -37,6 +40,9 @@ class ConnectViewController: UIViewController {
                 }
             }
         }
+        whereItAllBegan.textColor = .itemName
+        contactUs.textColor = .itemName
+        ourLocation.textColor = .itemName
     }
 
     override func didReceiveMemoryWarning() {
