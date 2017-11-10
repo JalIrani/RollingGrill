@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1cT-od-DAT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1cT-od-DAT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -165,9 +165,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-Mk-JDq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-Mk-JDq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="drinkFilterCell" id="Y7a-rX-0ON">
@@ -186,6 +185,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0ip-K9-QI8" firstAttribute="trailing" secondItem="KQb-Mk-JDq" secondAttribute="trailing" id="Sod-rF-xIL"/>
+                            <constraint firstItem="0ip-K9-QI8" firstAttribute="top" secondItem="KQb-Mk-JDq" secondAttribute="top" constant="64" id="T8K-9S-grn"/>
+                            <constraint firstItem="KQb-Mk-JDq" firstAttribute="leading" secondItem="0ip-K9-QI8" secondAttribute="leading" id="Xjd-PW-wm5"/>
+                            <constraint firstItem="KQb-Mk-JDq" firstAttribute="bottom" secondItem="0ip-K9-QI8" secondAttribute="bottom" constant="49" id="Xxu-fY-fDu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0ip-K9-QI8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Filter" id="1XG-Gn-Pis">
@@ -301,11 +306,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvU-2t-dRS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvU-2t-dRS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvg-lI-tVB">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvg-lI-tVB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBD-zh-Inj">
                                                 <rect key="frame" x="124" y="318" width="127" height="21"/>
@@ -414,27 +421,11 @@ Friday-Sunday 11am-5pm</string>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="NFB-Eu-bLx"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Rvg-lI-tVB" secondAttribute="trailing" id="5R9-zG-24r"/>
-                                    <constraint firstAttribute="bottom" secondItem="Rvg-lI-tVB" secondAttribute="bottom" id="7jo-KA-s86"/>
-                                    <constraint firstItem="Rvg-lI-tVB" firstAttribute="top" secondItem="jvU-2t-dRS" secondAttribute="top" id="aMg-fk-8Xh"/>
-                                    <constraint firstItem="Rvg-lI-tVB" firstAttribute="leading" secondItem="jvU-2t-dRS" secondAttribute="leading" id="tz4-hG-93w"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jvU-2t-dRS" firstAttribute="leading" secondItem="lsK-ib-0SM" secondAttribute="leading" id="250-tA-VgM"/>
-                            <constraint firstAttribute="bottom" secondItem="jvU-2t-dRS" secondAttribute="bottom" id="37y-C4-Mbi"/>
-                            <constraint firstItem="Rvg-lI-tVB" firstAttribute="width" secondItem="h9V-20-YbT" secondAttribute="width" id="Nt8-A7-2r0"/>
-                            <constraint firstItem="jvU-2t-dRS" firstAttribute="top" secondItem="lsK-ib-0SM" secondAttribute="top" id="Rjx-y4-P3X"/>
-                            <constraint firstItem="jvU-2t-dRS" firstAttribute="trailing" secondItem="lsK-ib-0SM" secondAttribute="trailing" id="hAB-jt-aWF"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lsK-ib-0SM"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="z2j-vN-7Wa"/>

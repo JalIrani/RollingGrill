@@ -74,6 +74,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self as UISearchResultsUpdating
         self.navigationItem.searchController = search
+        //navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
