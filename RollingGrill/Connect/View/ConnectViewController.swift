@@ -137,6 +137,9 @@ class ConnectViewController: UIViewController {
             }
         }
     }
+    @IBAction func notificationsTapped(_ sender: Any) {
+        UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
+    }
     
     
     /*

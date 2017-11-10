@@ -500,7 +500,13 @@ Friday-Sunday 11am-5pm</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lsK-ib-0SM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="z2j-vN-7Wa"/>
+                    <navigationItem key="navigationItem" title="About" id="z2j-vN-7Wa">
+                        <barButtonItem key="leftBarButtonItem" image="notificationIcon" id="aQU-kh-SN8">
+                            <connections>
+                                <action selector="notificationsTapped:" destination="mlV-AC-v0h" id="AiA-bj-4pg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="contactUs" destination="CBD-zh-Inj" id="UP6-F2-rNg"/>
@@ -687,6 +693,7 @@ Friday-Sunday 11am-5pm</string>
         <image name="gallerySymbol" width="25" height="25"/>
         <image name="instagram" width="29" height="29"/>
         <image name="menuSymbol" width="25" height="25"/>
+        <image name="notificationIcon" width="25" height="25"/>
         <image name="twitter" width="29" height="29"/>
     </resources>
     <color key="tintColor" red="1" green="0.0" blue="0.0093617555430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
