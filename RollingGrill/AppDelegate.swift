@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window?.tintColor = UIColor.blue
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound], completionHandler: {(granted, error) in
+        })
+        application.registerForRemoteNotifications()
         return true
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        print("success in registering for remote notifications with token \(deviceTokenString)")
+        if let defaultsDeviceToken = UserDefaults.standard.string(forKey: "deviceToken") {
+            if defaultsDeviceToken != deviceTokenString {
+                print("Setting a new device token \(deviceTokenString)")
+                UserDefaults.standard.set(deviceTokenString, forKey: "deviceToken")
+            } else {
+                print("This is already in user defaults, woo")
+                if let defaultsDeviceToken = UserDefaults.standard.string(forKey: "deviceToken") {
+                    print("The token stored is \(defaultsDeviceToken)")
+                }
+            }
+        } else {
+            print("Device token could not be unwrapped from UserDefaults")
+            UserDefaults.standard.set(deviceTokenString, forKey: "deviceToken")
+        }
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("Received push notification: \(userInfo)")
+        let aps = userInfo["aps"] as! [String: Any]
+        print("\(aps)")
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("failed to register for remote notifications: \(error.localizedDescription)")
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

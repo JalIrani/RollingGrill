@@ -30,6 +30,7 @@
 		331C3D021FB15768001CCEFF /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilterViewController.swift; sourceTree = "<group>"; };
 		33403D261FB0D44400016D78 /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
+		3345976F1FB7A0E400F87EF1 /* RollingGrill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollingGrill.entitlements; sourceTree = "<group>"; };
 		338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 		33C8441A1F71D52B00545D15 /* RollingGrill */ = {
 			isa = PBXGroup;
 			children = (
+				3345976F1FB7A0E400F87EF1 /* RollingGrill.entitlements */,
 				33C844321F71D69F00545D15 /* Menu */,
 				33C844341F71D6BF00545D15 /* Drink */,
 				339E0D6A1FA929F700C24B05 /* Gallery */,
@@ -282,6 +284,11 @@
 					33C844171F71D52B00545D15 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -510,6 +517,7 @@
 			baseConfigurationReference = F40951F77049075D42C2C288 /* Pods-RollingGrill.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RollingGrill/RollingGrill.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35U9HEBB6W;
 				INFOPLIST_FILE = RollingGrill/Info.plist;
@@ -526,6 +534,7 @@
 			baseConfigurationReference = 36DC71119D94900E2943B6E2 /* Pods-RollingGrill.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RollingGrill/RollingGrill.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35U9HEBB6W;
 				INFOPLIST_FILE = RollingGrill/Info.plist;
