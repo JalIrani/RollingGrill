@@ -91,11 +91,6 @@
                         <viewLayoutGuide key="safeArea" id="qbU-JD-pt5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Catering" id="AIV-rn-tKt">
-                        <barButtonItem key="leftBarButtonItem" systemItem="undo" id="h2R-yl-NPR">
-                            <connections>
-                                <action selector="undoTapped:" destination="ztc-pT-Fbw" id="REs-8Z-sE8"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="FKo-6f-u8v">
                             <connections>
                                 <segue destination="Uen-BK-oAL" kind="show" identifier="filterSections" id="3vd-Ag-xtz"/>
@@ -108,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84b-FX-cpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="-860"/>
+            <point key="canvasLocation" x="2474" y="-171"/>
         </scene>
         <!--Filter-->
         <scene sceneID="Nao-r6-FsS">
@@ -157,7 +152,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avb-EH-ME3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QRN-FW-yuE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3257" y="-860"/>
+            <point key="canvasLocation" x="3290" y="-171"/>
         </scene>
         <!--Filter-->
         <scene sceneID="opY-wT-WJo">
@@ -206,7 +201,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44W-Hk-mpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gOa-h4-IeV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3257" y="-171"/>
+            <point key="canvasLocation" x="3289" y="-866"/>
         </scene>
         <!--Menu-->
         <scene sceneID="CsO-pu-WKi">
@@ -281,11 +276,6 @@
                         <viewLayoutGuide key="safeArea" id="t8P-aI-Eg2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="moB-aC-Aif">
-                        <barButtonItem key="leftBarButtonItem" systemItem="undo" id="8zx-tn-39f">
-                            <connections>
-                                <action selector="undoTapped:" destination="ya9-ND-7uh" id="sNQ-t1-xlO"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="sbE-uH-289">
                             <connections>
                                 <segue destination="DUu-yE-Ypu" kind="show" identifier="filterSectionsDrink" id="2bA-27-9f7"/>
@@ -298,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-dv-d8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="-171"/>
+            <point key="canvasLocation" x="2473" y="-867"/>
         </scene>
         <!--About-->
         <scene sceneID="ouJ-T0-Vji">
@@ -519,7 +509,7 @@ Friday-Sunday 11am-5pm</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHS-Pc-ANC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="1438.3808095952024"/>
+            <point key="canvasLocation" x="2473" y="1438"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mnh-Kw-tu7">
@@ -537,8 +527,8 @@ Friday-Sunday 11am-5pm</string>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="j6x-zV-8ac" kind="relationship" relationship="viewControllers" id="28F-BN-7hv"/>
                         <segue destination="J8P-PB-BHT" kind="relationship" relationship="viewControllers" id="CzQ-A6-1Q7"/>
+                        <segue destination="j6x-zV-8ac" kind="relationship" relationship="viewControllers" id="28F-BN-7hv"/>
                         <segue destination="1Ja-dV-wrm" kind="relationship" relationship="viewControllers" id="3Oh-YM-1MV"/>
                         <segue destination="Roi-bX-Q8R" kind="relationship" relationship="viewControllers" id="Q2v-qW-qBd"/>
                     </connections>
@@ -564,7 +554,7 @@ Friday-Sunday 11am-5pm</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjC-1K-RAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416.8" y="-860.41979010494754"/>
+            <point key="canvasLocation" x="1580" y="-171"/>
         </scene>
         <!--Menu-->
         <scene sceneID="B4K-Sc-c2O">
@@ -583,7 +573,7 @@ Friday-Sunday 11am-5pm</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsN-pT-ib8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416.8" y="-171.36431784107947"/>
+            <point key="canvasLocation" x="1580" y="-867"/>
         </scene>
         <!--About-->
         <scene sceneID="tUC-rt-SU6">
@@ -602,7 +592,7 @@ Friday-Sunday 11am-5pm</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fG4-OF-tA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="1290"/>
+            <point key="canvasLocation" x="1580" y="1289"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="d4S-Bl-Kcq">
@@ -621,7 +611,7 @@ Friday-Sunday 11am-5pm</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Img-Bp-NJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="578"/>
+            <point key="canvasLocation" x="1580" y="578"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="c2E-Jg-GS8">
@@ -682,7 +672,7 @@ Friday-Sunday 11am-5pm</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyd-z8-LTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="577.9610194902549"/>
+            <point key="canvasLocation" x="2473" y="578"/>
         </scene>
     </scenes>
     <resources>

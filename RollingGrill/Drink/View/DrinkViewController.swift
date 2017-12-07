@@ -174,13 +174,6 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    @IBAction func undoTapped(_ sender: Any) {
-        filterSection[0] = "None"
-        filterSectionIndex = -1
-        drinkTableView.reloadData()
-    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "filterSectionsDrink" {
             if let secondController = segue.destination as? DrinkFilterViewController {

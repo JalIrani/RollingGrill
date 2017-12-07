@@ -187,11 +187,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    @IBAction func undoTapped(_ sender: Any) {
-        filterSection[0] = "None"
-        filterSectionIndex = -1
-        menuTableView.reloadData()
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "filterSections" {
