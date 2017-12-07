@@ -42,6 +42,14 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         ["", "", "", ""]
     ]
     
+    var checked = [
+        [false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false],
+        [false, false],
+        [false, false, false, false],
+        [false, false, false, false]
+    ]
+    
     var drinkItemArray = [String]()
     var drinkPriceArray = [String]()
     var drinkDescriptionArray = [String]()
@@ -124,11 +132,42 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         
-        cell.drinkItemLabel.textColor? = .itemName
-        cell.drinkPriceLabel.textColor? = .itemName
-        cell.drinkDescriptionLabel.textColor? = .itemName
+        // Fails when filtering
+        if !checked[indexPath.section][indexPath.row] {
+            cell.drinkItemLabel.textColor? = .itemName
+            cell.drinkPriceLabel.textColor? = .itemName
+            cell.drinkDescriptionLabel.textColor? = .itemName
+        } else {
+            cell.drinkItemLabel.textColor? = UIColor.red
+            cell.drinkPriceLabel.textColor? = UIColor.red
+            cell.drinkDescriptionLabel.textColor? = UIColor.red
+        }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? DrinkTableViewCell {
+            if checked[indexPath.section][indexPath.row] == true {
+                cell.drinkItemLabel.textColor = .itemName
+                cell.drinkPriceLabel.textColor? = .itemName
+                cell.drinkDescriptionLabel.textColor? = .itemName
+                checked[indexPath.section][indexPath.row] = false
+            } else {
+                cell.drinkItemLabel.textColor = UIColor.red
+                cell.drinkPriceLabel.textColor = UIColor.red
+                cell.drinkDescriptionLabel.textColor = UIColor.red
+                checked[indexPath.section][indexPath.row] = true
+            }
+        }
+    }
+    
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        print("Deselected: \(drinkItemsSectioned[indexPath.section][indexPath.row])")
+//        print(Double(drinkPricesSectioned[indexPath.section][indexPath.row])!)
+//
+//        let currentItem = tableView.cellForRow(at: indexPath) as! DrinkTableViewCell
+//        currentItem.drinkItemLabel.textColor = .itemName
+//    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension

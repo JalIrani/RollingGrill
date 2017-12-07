@@ -276,6 +276,7 @@
                         <viewLayoutGuide key="safeArea" id="t8P-aI-Eg2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="moB-aC-Aif">
+                        <barButtonItem key="leftBarButtonItem" image="shoppingCartSymbol" id="GT1-2P-fWD"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="sbE-uH-289">
                             <connections>
                                 <segue destination="DUu-yE-Ypu" kind="show" identifier="filterSectionsDrink" id="2bA-27-9f7"/>
@@ -684,6 +685,7 @@ Friday-Sunday 11am-5pm</string>
         <image name="instagram" width="29" height="29"/>
         <image name="menuSymbol" width="25" height="25"/>
         <image name="notificationIcon" width="25" height="25"/>
+        <image name="shoppingCartSymbol" width="25" height="25"/>
         <image name="twitter" width="29" height="29"/>
     </resources>
     <color key="tintColor" red="1" green="0.0" blue="0.0093617555430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
