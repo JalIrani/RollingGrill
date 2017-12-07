@@ -50,6 +50,8 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         [false, false, false, false]
     ]
     
+    var shoppingCart: [String: Double] = [:]
+    
     var drinkItemArray = [String]()
     var drinkPriceArray = [String]()
     var drinkDescriptionArray = [String]()
@@ -152,22 +154,25 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 cell.drinkPriceLabel.textColor? = .itemName
                 cell.drinkDescriptionLabel.textColor? = .itemName
                 checked[indexPath.section][indexPath.row] = false
+                shoppingCart.removeValue(forKey: cell.drinkItemLabel.text!)
+                print(shoppingCart)
             } else {
                 cell.drinkItemLabel.textColor = UIColor.red
                 cell.drinkPriceLabel.textColor = UIColor.red
                 cell.drinkDescriptionLabel.textColor = UIColor.red
                 checked[indexPath.section][indexPath.row] = true
+                print(cell.drinkItemLabel.text!)
+                print(cell.drinkPriceLabel.text!)
+                var price = cell.drinkPriceLabel.text!
+                price = price.replacingOccurrences(of: "$", with: "", options: NSString.CompareOptions.literal, range:nil)
+                shoppingCart[cell.drinkItemLabel.text!] = Double(price)
+                print(shoppingCart)
+                if indexPath.section == 0 {
+                    createPopup(dCell: cell)
+                }
             }
         }
     }
-    
-//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        print("Deselected: \(drinkItemsSectioned[indexPath.section][indexPath.row])")
-//        print(Double(drinkPricesSectioned[indexPath.section][indexPath.row])!)
-//
-//        let currentItem = tableView.cellForRow(at: indexPath) as! DrinkTableViewCell
-//        currentItem.drinkItemLabel.textColor = .itemName
-//    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -211,6 +216,22 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.filterSectionIndex = filterVC.selectedIndex
             }
         }
+    }
+    
+    func createPopup(dCell: DrinkTableViewCell) {
+        let alertController = UIAlertController(title: "Add Coleslaw?", message: "Only $1.00 extra", preferredStyle: .alert)
+        
+        let noAction = UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction!) in
+            
+        }
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction!) in
+            self.shoppingCart[dCell.drinkItemLabel.text!]! += 1.00
+            print(self.shoppingCart)
+        }
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        self.present(alertController, animated: true, completion:nil)
+        alertController.view.tintColor = UIColor.red
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
