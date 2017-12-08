@@ -276,7 +276,11 @@
                         <viewLayoutGuide key="safeArea" id="t8P-aI-Eg2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="moB-aC-Aif">
-                        <barButtonItem key="leftBarButtonItem" image="shoppingCartSymbol" id="GT1-2P-fWD"/>
+                        <barButtonItem key="leftBarButtonItem" image="shoppingCartSymbol" id="GT1-2P-fWD">
+                            <connections>
+                                <action selector="checkoutTapped:" destination="ya9-ND-7uh" id="Bmb-ry-0Df"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="sbE-uH-289">
                             <connections>
                                 <segue destination="DUu-yE-Ypu" kind="show" identifier="filterSectionsDrink" id="2bA-27-9f7"/>

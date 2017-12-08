@@ -168,7 +168,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 shoppingCart[cell.drinkItemLabel.text!] = Double(price)
                 print(shoppingCart)
                 if indexPath.section == 0 {
-                    createPopup(dCell: cell)
+                    createPopup(popupTitle: "Add Coleslaw?", popupMessage: "Only $1.00 extra", actionType: "coleslaw", shoppingCartItem: cell.drinkItemLabel.text!, title1: "No", title2: "Yes")
                 }
             }
         }
@@ -209,6 +209,14 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         header.textLabel?.textAlignment = .center
     }
     
+    @IBAction func checkoutTapped(_ sender: Any) {
+        if shoppingCart.count == 0 {
+            createPopup(popupTitle: "Shopping Cart is Empty", popupMessage: "Please click on a menu item to add it to the shopping cart", actionType: "none", shoppingCartItem: "none", title1: "Cancel", title2: "")
+        } else {
+            createPopup(popupTitle: "Checkout Shopping Cart", popupMessage: printShoppingCartItems(), actionType: "finished", shoppingCartItem: "none", title1: "Back", title2: "Checkout")
+        }
+    }
+    
     @IBAction func unwindFilterDrink(_ sender: UIStoryboardSegue) {
         if sender.source is DrinkFilterViewController {
             if let filterVC = sender.source as? DrinkFilterViewController {
@@ -218,18 +226,32 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    func createPopup(dCell: DrinkTableViewCell) {
-        let alertController = UIAlertController(title: "Add Coleslaw?", message: "Only $1.00 extra", preferredStyle: .alert)
+    func createPopup(popupTitle: String, popupMessage: String, actionType: String, shoppingCartItem: String, title1: String, title2: String) {
+        let alertController = UIAlertController(title: popupTitle, message: popupMessage, preferredStyle: .alert)
         
-        let noAction = UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction!) in
-            
+        
+        let noAction = UIAlertAction(title: title1, style: .cancel) { (action:UIAlertAction!) in
         }
-        let yesAction = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction!) in
-            self.shoppingCart[dCell.drinkItemLabel.text!]! += 1.00
-            print(self.shoppingCart)
-        }
-        alertController.addAction(yesAction)
         alertController.addAction(noAction)
+        
+        if actionType != "none" {
+            let yesAction = UIAlertAction(title: title2, style: .default) { (action:UIAlertAction!) in
+                
+                switch actionType {
+                case "finished":
+                    print("finished")
+                // segue
+                case "coleslaw":
+                    let itemWithSlaw = shoppingCartItem + " w/ coleslaw"
+                    self.shoppingCart[itemWithSlaw] = self.shoppingCart[shoppingCartItem]! + 1.00
+                    self.shoppingCart.removeValue(forKey: shoppingCartItem)
+                    print(self.shoppingCart)
+                default:
+                    print("not a case")
+                }
+            }
+            alertController.addAction(yesAction)
+        }
         self.present(alertController, animated: true, completion:nil)
         alertController.view.tintColor = UIColor.red
     }
@@ -241,6 +263,14 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 secondController.sectionsFilter = self.sections
             }
         }
+    }
+    
+    func printShoppingCartItems() -> String {
+        var checkoutList = ""
+        for item in shoppingCart {
+            checkoutList += item.key + ": $" + String(item.value) + "\n"
+        }
+        return checkoutList
     }
 }
 
