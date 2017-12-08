@@ -50,7 +50,11 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         [false, false, false, false]
     ]
     
-    var shoppingCart: [String: Double] = [:]
+    
+    
+    var shoppingCart: [String: [String]] = [:]
+    
+    //var myTuple: [(item: String, price: Double, coleslaw: String, Cheese: String)] = []
     
     var drinkItemArray = [String]()
     var drinkPriceArray = [String]()
@@ -165,10 +169,12 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 print(cell.drinkPriceLabel.text!)
                 var price = cell.drinkPriceLabel.text!
                 price = price.replacingOccurrences(of: "$", with: "", options: NSString.CompareOptions.literal, range:nil)
-                shoppingCart[cell.drinkItemLabel.text!] = Double(price)
+                shoppingCart[cell.drinkItemLabel.text!] = [price]
                 print(shoppingCart)
                 if indexPath.section == 0 {
-                    createPopup(popupTitle: "Add Coleslaw?", popupMessage: "Only $1.00 extra", actionType: "coleslaw", shoppingCartItem: cell.drinkItemLabel.text!, title1: "No", title2: "Yes")
+                    createTextFieldPopup(shoppingCartItem: cell.drinkItemLabel.text!)
+                } else {
+                    shoppingCart[cell.drinkItemLabel.text!] = [price, "none", "none"]
                 }
             }
         }
@@ -213,7 +219,8 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if shoppingCart.count == 0 {
             createPopup(popupTitle: "Shopping Cart is Empty", popupMessage: "Please click on a menu item to add it to the shopping cart", actionType: "none", shoppingCartItem: "none", title1: "Cancel", title2: "")
         } else {
-            createPopup(popupTitle: "Checkout Shopping Cart", popupMessage: printShoppingCartItems(), actionType: "finished", shoppingCartItem: "none", title1: "Back", title2: "Checkout")
+            let checkout = printShoppingCartItems()
+            createPopup(popupTitle: "Checkout Shopping Cart", popupMessage: checkout.0, actionType: "finished", shoppingCartItem: "none", title1: "Back", title2: "Checkout")
         }
     }
     
@@ -237,23 +244,59 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if actionType != "none" {
             let yesAction = UIAlertAction(title: title2, style: .default) { (action:UIAlertAction!) in
                 
-                switch actionType {
-                case "finished":
-                    print("finished")
-                // segue
-                case "coleslaw":
-                    let itemWithSlaw = shoppingCartItem + " w/ coleslaw"
-                    self.shoppingCart[itemWithSlaw] = self.shoppingCart[shoppingCartItem]! + 1.00
-                    self.shoppingCart.removeValue(forKey: shoppingCartItem)
-                    print(self.shoppingCart)
-                default:
-                    print("not a case")
-                }
+                
             }
             alertController.addAction(yesAction)
         }
+        //self.present(alertController, animated: true, completion:nil)
         self.present(alertController, animated: true, completion:nil)
         alertController.view.tintColor = UIColor.red
+    }
+    
+    func createTextFieldPopup(shoppingCartItem: String) {
+        let alertController1 = UIAlertController(title: "Would you like to add cheese?", message: "Only $0.50 extra", preferredStyle: .alert)
+        let alertController2 = UIAlertController(title: "Would you like to add coleslaw?", message: "Only $1.00 extra", preferredStyle: .alert)
+        
+        let noAction1 = UIAlertAction(title: "None", style: .cancel) { (action:UIAlertAction!) in
+            DispatchQueue.main.async() {
+                self.shoppingCart[shoppingCartItem]?.append("none")
+                print(self.shoppingCart)
+                self.present(alertController2, animated: true, completion: nil)
+            }
+        }
+        let provolone1 = UIAlertAction(title: "Provolone", style: .default) { (action:UIAlertAction!) in
+            self.shoppingCart[shoppingCartItem]?.append("provolone")
+            print(self.shoppingCart)
+            DispatchQueue.main.async() {
+                self.present(alertController2, animated: true, completion: nil)
+            }
+        }
+        let cheddar1 = UIAlertAction(title: "Cheddar", style: .default) { (action:UIAlertAction!) in
+            self.shoppingCart[shoppingCartItem]?.append("cheddar")
+            print(self.shoppingCart)
+            DispatchQueue.main.async() {
+                self.present(alertController2, animated: true, completion: nil)
+            }
+        }
+        
+        let noAction2 = UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction!) in
+            print(self.shoppingCart)
+            self.shoppingCart[shoppingCartItem]?.append("none")
+        }
+        let yesAction2 = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction!) in
+            print(self.shoppingCart)
+            self.shoppingCart[shoppingCartItem]?.append("coleslaw")
+        }
+        alertController1.addAction(noAction1)
+        alertController1.addAction(provolone1)
+        alertController1.addAction(cheddar1)
+        
+        alertController2.addAction(noAction2)
+        alertController2.addAction(yesAction2)
+        
+        self.present(alertController1, animated: true, completion:nil)
+        alertController1.view.tintColor = UIColor.red
+        alertController2.view.tintColor = UIColor.red
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -265,12 +308,23 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    func printShoppingCartItems() -> String {
+    func printShoppingCartItems() -> (String, Double) {
         var checkoutList = ""
+        var price = 0.0
         for item in shoppingCart {
-            checkoutList += item.key + ": $" + String(item.value) + "\n"
+            checkoutList += item.key
+            price = Double(item.value[0])!
+            if item.value[1] != "none" {
+                price += 0.50
+                checkoutList += " w/ \(item.value[1]) "
+            }
+            if item.value[2] == "coleslaw" {
+                price += 1.00
+                checkoutList += " w/ \(item.value[2])"
+            }
+            checkoutList += ": $\(price)\n"
         }
-        return checkoutList
+        return (checkoutList, price)
     }
 }
 

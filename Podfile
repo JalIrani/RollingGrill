@@ -7,5 +7,4 @@ target 'RollingGrill' do
 
   # Pods for RollingGrill
   pod 'INSPhotoGallery'
-
 end
