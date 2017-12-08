@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9285282D953CCBB51D6D4D1FDE455163"
+               BlueprintIdentifier = "3F3B6B4792201F6D43EC24237D7C83AE"
                BuildableName = "Pods_RollingGrill.framework"
                BlueprintName = "Pods-RollingGrill"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9285282D953CCBB51D6D4D1FDE455163"
+            BlueprintIdentifier = "3F3B6B4792201F6D43EC24237D7C83AE"
             BuildableName = "Pods_RollingGrill.framework"
             BlueprintName = "Pods-RollingGrill"
             ReferencedContainer = "container:Pods.xcodeproj">

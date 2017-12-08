@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
