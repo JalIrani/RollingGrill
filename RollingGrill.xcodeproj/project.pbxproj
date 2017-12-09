@@ -10,6 +10,7 @@
 		331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C3D021FB15768001CCEFF /* ConnectViewController.swift */; };
 		333179261FB221C900F1D5DE /* DrinkFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */; };
 		33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33403D261FB0D44400016D78 /* MenuFilterViewController.swift */; };
+		336249CE1FDB90AC00B529D7 /* MockCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336249CD1FDB90AC00B529D7 /* MockCustomer.swift */; };
 		338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */; };
 		339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */; };
 		33C548C41FA9259D00D34899 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */; };
@@ -31,6 +32,7 @@
 		333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilterViewController.swift; sourceTree = "<group>"; };
 		33403D261FB0D44400016D78 /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
 		3345976F1FB7A0E400F87EF1 /* RollingGrill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollingGrill.entitlements; sourceTree = "<group>"; };
+		336249CD1FDB90AC00B529D7 /* MockCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCustomer.swift; sourceTree = "<group>"; };
 		338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +127,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		336249C71FDB8A2900B529D7 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				336249C81FDB8A3200B529D7 /* View */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
+		336249C81FDB8A3200B529D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		338B7BA21FA9303700BAB272 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +196,7 @@
 		33C8441A1F71D52B00545D15 /* RollingGrill */ = {
 			isa = PBXGroup;
 			children = (
+				336249C71FDB8A2900B529D7 /* Checkout */,
 				3345976F1FB7A0E400F87EF1 /* RollingGrill.entitlements */,
 				33C844321F71D69F00545D15 /* Menu */,
 				33C844341F71D6BF00545D15 /* Drink */,
@@ -211,6 +229,7 @@
 				333179231FB221AC00F1D5DE /* Filter */,
 				331F0CAF1FA7B54400586361 /* View */,
 				33D1093D1F7EF6CF00374166 /* Cell */,
+				336249CD1FDB90AC00B529D7 /* MockCustomer.swift */,
 			);
 			path = Drink;
 			sourceTree = "<group>";
@@ -384,6 +403,7 @@
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
 				339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */,
+				336249CE1FDB90AC00B529D7 /* MockCustomer.swift in Sources */,
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
 				33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */,
 				338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */,

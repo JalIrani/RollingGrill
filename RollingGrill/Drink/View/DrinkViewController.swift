@@ -9,7 +9,22 @@
 import UIKit
 import Stripe
 
-class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, STPPaymentMethodsViewControllerDelegate {
+    func paymentMethodsViewControllerDidCancel(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func paymentMethodsViewControllerDidFinish(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
+        paymentMethodsViewController.navigationController?.popViewController(animated: true)
+    }
+    
+    func paymentMethodsViewController(_ paymentMethodsViewController: STPPaymentMethodsViewController, didFailToLoadWithError error: Error) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    let customerContext = MockCustomerContext()
+    
+
     
     @IBOutlet weak var drinkTableView: UITableView!
     
@@ -246,6 +261,19 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let yesAction = UIAlertAction(title: title2, style: .default) { (action:UIAlertAction!) in
                 
                 
+                
+                let config = STPPaymentConfiguration()
+                config.additionalPaymentMethods = .all
+                config.requiredBillingAddressFields = .none
+                config.appleMerchantIdentifier = "dummy-merchant-id"
+                let viewController = STPPaymentMethodsViewController(configuration: config,
+                                                                     theme: STPTheme.default(),
+                                                                     customerContext: self.customerContext,
+                                                                     delegate: self)
+                let navigationController = UINavigationController(rootViewController: viewController)
+                navigationController.navigationBar.stp_theme = STPTheme.default()
+                self.present(navigationController, animated: true, completion: nil)
+                //self.performSegue(withIdentifier: "paymentSegue", sender: self)
             }
             alertController.addAction(yesAction)
         }
