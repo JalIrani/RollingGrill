@@ -27,6 +27,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     @IBOutlet weak var drinkTableView: UITableView!
+    @IBOutlet weak var shoppingCartButton: UIBarButtonItem!
     
     var filterSection = ["None"]
     var filterSectionIndex = -1
@@ -193,6 +194,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     shoppingCart[cell.drinkItemLabel.text!] = [price, "none", "none"]
                 }
             }
+            shoppingCartButton.addBadge(number: shoppingCart.count)
         }
     }
     

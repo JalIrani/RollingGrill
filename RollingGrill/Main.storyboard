@@ -304,6 +304,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="drinkTableView" destination="bL4-0x-Of6" id="bfM-MP-dNE"/>
+                        <outlet property="shoppingCartButton" destination="GT1-2P-fWD" id="0Bl-tS-GKT"/>
                         <segue destination="fRf-vQ-sVf" kind="show" identifier="paymentSegue" id="gYs-th-sqg"/>
                     </connections>
                 </viewController>
@@ -577,6 +578,47 @@ Friday-Sunday 11am-5pm</string>
             </objects>
             <point key="canvasLocation" x="1580" y="-171"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lRA-cY-BOe">
+            <objects>
+                <viewController storyboardIdentifier="onboarding" id="6ql-p1-9UO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NIZ-eR-Bhv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rollinggrillicon" translatesAutoresizingMaskIntoConstraints="NO" id="kpi-qg-gaZ">
+                                <rect key="frame" x="67" y="539" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tos-fb-7Pp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="376"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Welcome to The Rolling Grill! Feel free to order Menu items on the first tab by clicking on the item, then select the shopping cart when you order is complete.</string>
+                                <color key="textColor" red="1" green="0.0" blue="0.0093617555430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="33"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUa-z4-gWX">
+                                <rect key="frame" x="143" y="501" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="1cT-od-DAT" kind="popoverPresentation" popoverAnchorView="RUa-z4-gWX" id="x3Q-8K-znb">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Ebu-wf-Z6t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOU-5X-lFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418.39999999999998" y="-952.17391304347836"/>
+        </scene>
         <!--Menu-->
         <scene sceneID="B4K-Sc-c2O">
             <objects>
@@ -705,6 +747,7 @@ Friday-Sunday 11am-5pm</string>
         <image name="instagram" width="29" height="29"/>
         <image name="menuSymbol" width="25" height="25"/>
         <image name="notificationIcon" width="25" height="25"/>
+        <image name="rollinggrillicon" width="874" height="436"/>
         <image name="shoppingCartSymbol" width="25" height="25"/>
         <image name="twitter" width="29" height="29"/>
     </resources>

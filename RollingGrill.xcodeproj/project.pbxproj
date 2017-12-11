@@ -13,6 +13,7 @@
 		336249CE1FDB90AC00B529D7 /* MockCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336249CD1FDB90AC00B529D7 /* MockCustomer.swift */; };
 		338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */; };
 		339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */; };
+		33B9910A1FDF18E3000C4E1A /* BarButtonBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B991091FDF18E3000C4E1A /* BarButtonBadges.swift */; };
 		33C548C41FA9259D00D34899 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */; };
 		33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8441B1F71D52B00545D15 /* AppDelegate.swift */; };
 		33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33C844221F71D52B00545D15 /* RollingGrill.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 		336249CD1FDB90AC00B529D7 /* MockCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCustomer.swift; sourceTree = "<group>"; };
 		338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		33B991091FDF18E3000C4E1A /* BarButtonBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonBadges.swift; sourceTree = "<group>"; };
 		33C548C31FA9259D00D34899 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		33C844181F71D52B00545D15 /* RollingGrill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollingGrill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C8441B1F71D52B00545D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				33E463E31F8580CB000F0086 /* Colors.swift */,
+				33B991091FDF18E3000C4E1A /* BarButtonBadges.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */,
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
+				33B9910A1FDF18E3000C4E1A /* BarButtonBadges.swift in Sources */,
 				339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */,
 				336249CE1FDB90AC00B529D7 /* MockCustomer.swift in Sources */,
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
