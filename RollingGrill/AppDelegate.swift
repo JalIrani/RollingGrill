@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let notFirstTime = UserDefaults.standard.bool(forKey: "notFirstTime")
         if !notFirstTime {
+            //UserDefaults.standard.set(true, forKey: "notFirstTime")
             let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "onboarding") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)

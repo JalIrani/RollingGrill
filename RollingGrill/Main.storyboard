@@ -201,7 +201,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44W-Hk-mpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gOa-h4-IeV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3289" y="-866"/>
+            <point key="canvasLocation" x="3628" y="-866.71664167916049"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h0e-3n-uaO">
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uED-J3-sLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="-1564"/>
+            <point key="canvasLocation" x="2812" y="-1564.7676161919042"/>
         </scene>
         <!--Menu-->
         <scene sceneID="CsO-pu-WKi">
@@ -310,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-dv-d8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="-867"/>
+            <point key="canvasLocation" x="2812" y="-867.61619190404804"/>
         </scene>
         <!--About-->
         <scene sceneID="ouJ-T0-Vji">
@@ -578,32 +578,34 @@ Friday-Sunday 11am-5pm</string>
             </objects>
             <point key="canvasLocation" x="1580" y="-171"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome to The Rolling Grill-->
         <scene sceneID="lRA-cY-BOe">
             <objects>
-                <viewController storyboardIdentifier="onboarding" id="6ql-p1-9UO" sceneMemberID="viewController">
+                <viewController id="6ql-p1-9UO" customClass="OnboardingViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NIZ-eR-Bhv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rollinggrillicon" translatesAutoresizingMaskIntoConstraints="NO" id="kpi-qg-gaZ">
-                                <rect key="frame" x="67" y="539" width="240" height="128"/>
+                                <rect key="frame" x="67" y="451" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tos-fb-7Pp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="376"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Welcome to The Rolling Grill! Feel free to order Menu items on the first tab by clicking on the item, then select the shopping cart when you order is complete.</string>
-                                <color key="textColor" red="1" green="0.0" blue="0.0093617555430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="33"/>
+                                <string key="text">Feel free to order Menu items on the first tab by clicking on the item, then select the shopping cart when you order is complete.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUa-z4-gWX">
-                                <rect key="frame" x="143" y="501" width="88" height="30"/>
+                                <rect key="frame" x="94" y="601" width="187" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="26"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="1cT-od-DAT" kind="popoverPresentation" popoverAnchorView="RUa-z4-gWX" id="x3Q-8K-znb">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -614,10 +616,14 @@ Friday-Sunday 11am-5pm</string>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Ebu-wf-Z6t"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome to The Rolling Grill" id="4WT-xS-zX8"/>
+                    <connections>
+                        <outlet property="completeOnboardingButton" destination="RUa-z4-gWX" id="Ogs-5S-e33"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOU-5X-lFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418.39999999999998" y="-952.17391304347836"/>
+            <point key="canvasLocation" x="757.60000000000002" y="-952.17391304347836"/>
         </scene>
         <!--Menu-->
         <scene sceneID="B4K-Sc-c2O">
@@ -636,7 +642,7 @@ Friday-Sunday 11am-5pm</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsN-pT-ib8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="-867"/>
+            <point key="canvasLocation" x="1919.2" y="-867.61619190404804"/>
         </scene>
         <!--About-->
         <scene sceneID="tUC-rt-SU6">
@@ -736,6 +742,24 @@ Friday-Sunday 11am-5pm</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyd-z8-LTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2473" y="578"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y1F-r8-6Z7">
+            <objects>
+                <navigationController storyboardIdentifier="onboarding" automaticallyAdjustsScrollViewInsets="NO" id="ynB-09-kK5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HHQ-JL-qov">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6ql-p1-9UO" kind="relationship" relationship="rootViewController" id="KeL-Mr-FrY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAB-Pv-pxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="-952"/>
         </scene>
     </scenes>
     <resources>

@@ -347,7 +347,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
             price = Double(item.value[0])!
             if item.value[1] != "none" {
                 price += 0.50
-                checkoutList += " w/ \(item.value[1]) "
+                checkoutList += " w/ \(item.value[1])"
             }
             if item.value[2] == "coleslaw" {
                 price += 1.00
