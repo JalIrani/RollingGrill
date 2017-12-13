@@ -201,7 +201,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44W-Hk-mpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gOa-h4-IeV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3628" y="-866.71664167916049"/>
+            <point key="canvasLocation" x="3967.1999999999998" y="-866.71664167916049"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h0e-3n-uaO">
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uED-J3-sLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2812" y="-1564.7676161919042"/>
+            <point key="canvasLocation" x="3151.1999999999998" y="-1564.7676161919042"/>
         </scene>
         <!--Menu-->
         <scene sceneID="CsO-pu-WKi">
@@ -310,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-dv-d8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2812" y="-867.61619190404804"/>
+            <point key="canvasLocation" x="3151.1999999999998" y="-867.61619190404804"/>
         </scene>
         <!--About-->
         <scene sceneID="ouJ-T0-Vji">
@@ -581,28 +581,31 @@ Friday-Sunday 11am-5pm</string>
         <!--Welcome to The Rolling Grill-->
         <scene sceneID="lRA-cY-BOe">
             <objects>
-                <viewController id="6ql-p1-9UO" customClass="OnboardingViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboarding" id="6ql-p1-9UO" customClass="OnboardingViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NIZ-eR-Bhv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rollinggrillicon" translatesAutoresizingMaskIntoConstraints="NO" id="kpi-qg-gaZ">
-                                <rect key="frame" x="67" y="451" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tos-fb-7Pp">
-                                <rect key="frame" x="0.0" y="88" width="375" height="212"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tos-fb-7Pp">
+                                <rect key="frame" x="0.0" y="56" width="375" height="331"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Feel free to order Menu items on the first tab by clicking on the item, then select the shopping cart when you order is complete.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUa-z4-gWX">
-                                <rect key="frame" x="94" y="601" width="187" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="38"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rollinggrillicon" translatesAutoresizingMaskIntoConstraints="NO" id="kpi-qg-gaZ">
+                                <rect key="frame" x="67" y="448" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="HGa-42-2VA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUa-z4-gWX">
+                                <rect key="frame" x="90" y="601" width="194" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="oeO-YQ-dow"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -614,6 +617,18 @@ Friday-Sunday 11am-5pm</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tos-fb-7Pp" firstAttribute="centerX" secondItem="kpi-qg-gaZ" secondAttribute="centerX" id="13H-59-tBt"/>
+                            <constraint firstItem="kpi-qg-gaZ" firstAttribute="centerX" secondItem="RUa-z4-gWX" secondAttribute="centerX" id="6g9-7Q-oYp"/>
+                            <constraint firstItem="kpi-qg-gaZ" firstAttribute="leading" secondItem="Ebu-wf-Z6t" secondAttribute="leading" constant="67" id="8fd-CD-opf"/>
+                            <constraint firstItem="RUa-z4-gWX" firstAttribute="leading" secondItem="Ebu-wf-Z6t" secondAttribute="leading" constant="90" id="GBP-JJ-O5I"/>
+                            <constraint firstAttribute="bottom" secondItem="RUa-z4-gWX" secondAttribute="bottom" constant="20" symbolic="YES" id="If4-wh-yXG"/>
+                            <constraint firstAttribute="trailing" secondItem="Tos-fb-7Pp" secondAttribute="trailing" id="SVO-jb-YGb"/>
+                            <constraint firstItem="RUa-z4-gWX" firstAttribute="top" secondItem="kpi-qg-gaZ" secondAttribute="bottom" constant="25" id="bjf-8f-n1H"/>
+                            <constraint firstItem="kpi-qg-gaZ" firstAttribute="top" secondItem="Tos-fb-7Pp" secondAttribute="bottom" constant="61" id="fCa-hS-SgD"/>
+                            <constraint firstItem="Tos-fb-7Pp" firstAttribute="top" secondItem="Ebu-wf-Z6t" secondAttribute="top" constant="36" id="gu7-uw-pM5"/>
+                            <constraint firstItem="Tos-fb-7Pp" firstAttribute="leading" secondItem="NIZ-eR-Bhv" secondAttribute="leading" id="qb1-nd-mqc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ebu-wf-Z6t"/>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome to The Rolling Grill" id="4WT-xS-zX8"/>
@@ -623,7 +638,7 @@ Friday-Sunday 11am-5pm</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOU-5X-lFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757.60000000000002" y="-952.17391304347836"/>
+            <point key="canvasLocation" x="1096.8" y="-952.17391304347836"/>
         </scene>
         <!--Menu-->
         <scene sceneID="B4K-Sc-c2O">
@@ -642,7 +657,7 @@ Friday-Sunday 11am-5pm</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsN-pT-ib8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919.2" y="-867.61619190404804"/>
+            <point key="canvasLocation" x="2258.4000000000001" y="-867.61619190404804"/>
         </scene>
         <!--About-->
         <scene sceneID="tUC-rt-SU6">
@@ -742,24 +757,6 @@ Friday-Sunday 11am-5pm</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyd-z8-LTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2473" y="578"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="y1F-r8-6Z7">
-            <objects>
-                <navigationController storyboardIdentifier="onboarding" automaticallyAdjustsScrollViewInsets="NO" id="ynB-09-kK5" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HHQ-JL-qov">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6ql-p1-9UO" kind="relationship" relationship="rootViewController" id="KeL-Mr-FrY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sAB-Pv-pxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="20" y="-952"/>
         </scene>
     </scenes>
     <resources>

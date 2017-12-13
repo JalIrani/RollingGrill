@@ -10,21 +10,8 @@ import UIKit
 import Stripe
 
 class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, STPPaymentMethodsViewControllerDelegate {
-    func paymentMethodsViewControllerDidCancel(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func paymentMethodsViewControllerDidFinish(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
-        paymentMethodsViewController.navigationController?.popViewController(animated: true)
-    }
-    
-    func paymentMethodsViewController(_ paymentMethodsViewController: STPPaymentMethodsViewController, didFailToLoadWithError error: Error) {
-        dismiss(animated: true, completion: nil)
-    }
     
     let customerContext = MockCustomerContext()
-    
-
     
     @IBOutlet weak var drinkTableView: UITableView!
     @IBOutlet weak var shoppingCartButton: UIBarButtonItem!
@@ -231,6 +218,19 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         header.textLabel?.frame = header.frame
         header.textLabel?.textAlignment = .center
+    }
+    
+    func paymentMethodsViewControllerDidCancel(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func paymentMethodsViewControllerDidFinish(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
+        paymentMethodsViewController.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func paymentMethodsViewController(_ paymentMethodsViewController: STPPaymentMethodsViewController, didFailToLoadWithError error: Error) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func checkoutTapped(_ sender: Any) {

@@ -32,7 +32,8 @@ class OnboardingViewController: UIViewController {
     }
     
     func navBarSetup() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         //UINavigationBar.appearance().barTintColor = UIColor.black
         navigationController?.navigationBar.barTintColor = UIColor.clear
 
