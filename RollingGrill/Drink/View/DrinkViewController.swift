@@ -12,6 +12,7 @@ import Stripe
 class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, STPPaymentMethodsViewControllerDelegate {
     
     let customerContext = MockCustomerContext()
+    let themeViewController = ThemeViewController()
     
     @IBOutlet weak var drinkTableView: UITableView!
     @IBOutlet weak var shoppingCartButton: UIBarButtonItem!
@@ -53,8 +54,6 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         [false, false, false, false],
         [false, false, false, false]
     ]
-    
-    
     
     var shoppingCart: [String: [String]] = [:]
     
@@ -225,7 +224,8 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func paymentMethodsViewControllerDidFinish(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
-        paymentMethodsViewController.navigationController?.popViewController(animated: true)
+        //paymentMethodsViewController.navigationController?.popViewController(animated: true)
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -261,19 +261,11 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if actionType != "none" {
             let yesAction = UIAlertAction(title: title2, style: .default) { (action:UIAlertAction!) in
-                
-                
-                
-                let config = STPPaymentConfiguration()
-                config.additionalPaymentMethods = .all
-                config.requiredBillingAddressFields = .none
-                config.appleMerchantIdentifier = "dummy-merchant-id"
-                let viewController = STPPaymentMethodsViewController(configuration: config,
-                                                                     theme: STPTheme.default(),
-                                                                     customerContext: self.customerContext,
-                                                                     delegate: self)
+                let theme = self.themeViewController.theme.stpTheme
+                let viewController = CardFieldViewController()
+                viewController.theme = theme
                 let navigationController = UINavigationController(rootViewController: viewController)
-                navigationController.navigationBar.stp_theme = STPTheme.default()
+                navigationController.navigationBar.stp_theme = theme
                 self.present(navigationController, animated: true, completion: nil)
                 //self.performSegue(withIdentifier: "paymentSegue", sender: self)
             }

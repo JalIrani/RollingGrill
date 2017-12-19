@@ -21,36 +21,36 @@ class MockCustomer: STPCustomer {
          Not using the "4242" and "4444" numbers, since those are the easiest
          to remember and fill.
          */
-        let visa = [
-            "id": "preloaded_visa",
-            "exp_month": "10",
-            "exp_year": "2020",
-            "last4": "1881",
-            "brand": "visa",
-            ]
-        if let card = STPCard.decodedObject(fromAPIResponse: visa) {
-            mockSources.append(card)
-        }
-        let masterCard = [
-            "id": "preloaded_mastercard",
-            "exp_month": "10",
-            "exp_year": "2020",
-            "last4": "8210",
-            "brand": "mastercard",
-            ]
-        if let card = STPCard.decodedObject(fromAPIResponse: masterCard) {
-            mockSources.append(card)
-        }
-        let amex = [
-            "id": "preloaded_amex",
-            "exp_month": "10",
-            "exp_year": "2020",
-            "last4": "0005",
-            "brand": "american express",
-            ]
-        if let card = STPCard.decodedObject(fromAPIResponse: amex) {
-            mockSources.append(card)
-        }
+//        let visa = [
+//            "id": "preloaded_visa",
+//            "exp_month": "10",
+//            "exp_year": "2020",
+//            "last4": "1881",
+//            "brand": "visa",
+//            ]
+//        if let card = STPCard.decodedObject(fromAPIResponse: visa) {
+//            mockSources.append(card)
+//        }
+//        let masterCard = [
+//            "id": "preloaded_mastercard",
+//            "exp_month": "10",
+//            "exp_year": "2020",
+//            "last4": "8210",
+//            "brand": "mastercard",
+//            ]
+//        if let card = STPCard.decodedObject(fromAPIResponse: masterCard) {
+//            mockSources.append(card)
+//        }
+//        let amex = [
+//            "id": "preloaded_amex",
+//            "exp_month": "10",
+//            "exp_year": "2020",
+//            "last4": "0005",
+//            "brand": "american express",
+//            ]
+//        if let card = STPCard.decodedObject(fromAPIResponse: amex) {
+//            mockSources.append(card)
+//        }
     }
     
     override var sources: [STPSourceProtocol] {
