@@ -261,13 +261,13 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if actionType != "none" {
             let yesAction = UIAlertAction(title: title2, style: .default) { (action:UIAlertAction!) in
-                let theme = self.themeViewController.theme.stpTheme
-                let viewController = CardFieldViewController()
-                viewController.theme = theme
-                let navigationController = UINavigationController(rootViewController: viewController)
-                navigationController.navigationBar.stp_theme = theme
-                self.present(navigationController, animated: true, completion: nil)
-                //self.performSegue(withIdentifier: "paymentSegue", sender: self)
+//                let theme = self.themeViewController.theme.stpTheme
+//                let viewController = CardFieldViewController()
+//                viewController.theme = theme
+//                let navigationController = UINavigationController(rootViewController: viewController)
+//                navigationController.navigationBar.stp_theme = theme
+//                self.present(navigationController, animated: true, completion: nil)
+                self.performSegue(withIdentifier: "paymentSegue", sender: self)
             }
             alertController.addAction(yesAction)
         }

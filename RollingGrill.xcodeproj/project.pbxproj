@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3314D9D01FE96D1E001D7CF8 /* ChefMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314D9CF1FE96D1E001D7CF8 /* ChefMessageViewController.swift */; };
 		331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C3D021FB15768001CCEFF /* ConnectViewController.swift */; };
 		333179261FB221C900F1D5DE /* DrinkFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */; };
 		33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33403D261FB0D44400016D78 /* MenuFilterViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		0C87EB708D5D9507F7B1F979 /* Pods_RollingGrill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingGrill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3314D9CF1FE96D1E001D7CF8 /* ChefMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefMessageViewController.swift; sourceTree = "<group>"; };
 		331C3D021FB15768001CCEFF /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilterViewController.swift; sourceTree = "<group>"; };
 		33403D261FB0D44400016D78 /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3314D9CD1FE96D04001D7CF8 /* ChefMessage */ = {
+			isa = PBXGroup;
+			children = (
+				3314D9CE1FE96D0F001D7CF8 /* View */,
+			);
+			path = ChefMessage;
+			sourceTree = "<group>";
+		};
+		3314D9CE1FE96D0F001D7CF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3314D9CF1FE96D1E001D7CF8 /* ChefMessageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		331C3D011FB15752001CCEFF /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +156,7 @@
 		336249C71FDB8A2900B529D7 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				3314D9CD1FE96D04001D7CF8 /* ChefMessage */,
 				336249C81FDB8A3200B529D7 /* View */,
 			);
 			path = Checkout;
@@ -445,6 +464,7 @@
 				33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */,
 				331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */,
 				33B3ADF61FE57D6400C69C50 /* CardFieldViewController.swift in Sources */,
+				3314D9D01FE96D1E001D7CF8 /* ChefMessageViewController.swift in Sources */,
 				33C844241F71D52B00545D15 /* RollingGrill.xcdatamodeld in Sources */,
 				33C8441C1F71D52B00545D15 /* AppDelegate.swift in Sources */,
 				33B9910E1FDF2329000C4E1A /* OnboardingViewController.swift in Sources */,

@@ -201,22 +201,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44W-Hk-mpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gOa-h4-IeV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3967.1999999999998" y="-866.71664167916049"/>
+            <point key="canvasLocation" x="4274" y="-868"/>
         </scene>
-        <!--View Controller-->
+        <!--Message to the Chef-->
         <scene sceneID="h0e-3n-uaO">
             <objects>
-                <viewController id="fRf-vQ-sVf" sceneMemberID="viewController">
+                <viewController title="Message to the Chef" id="fRf-vQ-sVf" customClass="ChefMessageViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j26-Uk-LZT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f17-Oc-gw8">
+                                <rect key="frame" x="16" y="168" width="343" height="193"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any specifics about your order?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyc-r5-jWu">
+                                <rect key="frame" x="45" y="139" width="284" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f17-Oc-gw8" firstAttribute="leading" secondItem="j26-Uk-LZT" secondAttribute="leadingMargin" id="EzB-kd-iJe"/>
+                            <constraint firstItem="f17-Oc-gw8" firstAttribute="trailing" secondItem="j26-Uk-LZT" secondAttribute="trailingMargin" id="Msj-dl-ggv"/>
+                            <constraint firstItem="f17-Oc-gw8" firstAttribute="top" secondItem="Hyc-r5-jWu" secondAttribute="bottom" constant="8" symbolic="YES" id="N8b-ww-ZkV"/>
+                            <constraint firstItem="Hyc-r5-jWu" firstAttribute="top" secondItem="v3G-UO-SYx" secondAttribute="top" constant="75" id="RME-fb-q7T"/>
+                            <constraint firstItem="Hyc-r5-jWu" firstAttribute="leading" secondItem="v3G-UO-SYx" secondAttribute="leading" constant="45" id="TBy-yf-Ika"/>
+                            <constraint firstItem="Hyc-r5-jWu" firstAttribute="centerX" secondItem="f17-Oc-gw8" secondAttribute="centerX" id="Xya-8k-EMg"/>
+                            <constraint firstItem="v3G-UO-SYx" firstAttribute="bottom" secondItem="f17-Oc-gw8" secondAttribute="bottom" constant="257" id="uJa-xb-qhg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="v3G-UO-SYx"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Message to the Chef" id="OAl-Sa-FpG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PnC-Iy-p8S">
+                            <connections>
+                                <segue destination="V9h-45-WlM" kind="popoverPresentation" popoverAnchorBarButtonItem="PnC-Iy-p8S" id="qdL-P5-4y4">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="label" destination="Hyc-r5-jWu" id="LJi-n6-IFW"/>
+                        <outlet property="textView" destination="f17-Oc-gw8" id="Xw3-eb-Cmw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uED-J3-sLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3151.1999999999998" y="-1564.7676161919042"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QvE-hG-ymz">
+            <objects>
+                <viewController id="V9h-45-WlM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hwk-5r-Ftz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8W-O9-WPN">
+                                <rect key="frame" x="150" y="323" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="234-Bc-7PF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXb-rz-GGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3922" y="-1565"/>
         </scene>
         <!--Menu-->
         <scene sceneID="CsO-pu-WKi">
