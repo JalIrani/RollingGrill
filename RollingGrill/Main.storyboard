@@ -12,6 +12,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Helvetica.ttc">
+            <string>Helvetica</string>
             <string>Helvetica-Bold</string>
             <string>Helvetica-Light</string>
             <string>Helvetica-Oblique</string>
@@ -201,7 +202,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44W-Hk-mpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gOa-h4-IeV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4274" y="-868"/>
+            <point key="canvasLocation" x="4164" y="-868"/>
         </scene>
         <!--Message to the Chef-->
         <scene sceneID="h0e-3n-uaO">
@@ -239,7 +240,7 @@
                     <navigationItem key="navigationItem" title="Message to the Chef" id="OAl-Sa-FpG">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="PnC-Iy-p8S">
                             <connections>
-                                <segue destination="V9h-45-WlM" kind="popoverPresentation" popoverAnchorBarButtonItem="PnC-Iy-p8S" id="qdL-P5-4y4">
+                                <segue destination="Fsb-YS-rWM" kind="popoverPresentation" popoverAnchorBarButtonItem="PnC-Iy-p8S" id="qdL-P5-4y4">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -252,20 +253,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uED-J3-sLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3151.1999999999998" y="-1564.7676161919042"/>
+            <point key="canvasLocation" x="3289" y="-1566"/>
         </scene>
-        <!--View Controller-->
+        <!--Checkout-->
         <scene sceneID="QvE-hG-ymz">
             <objects>
-                <viewController id="V9h-45-WlM" sceneMemberID="viewController">
+                <viewController id="V9h-45-WlM" customClass="CheckoutViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hwk-5r-Ftz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8W-O9-WPN">
-                                <rect key="frame" x="150" y="323" width="74" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ORDER DETAILS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8W-O9-WPN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -273,10 +275,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="234-Bc-7PF"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Checkout" id="hyu-nS-wpv">
+                        <barButtonItem key="leftBarButtonItem" title="X" id="efN-XM-LuO">
+                            <connections>
+                                <action selector="closeTapped:" destination="V9h-45-WlM" id="jNs-ga-ebE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXb-rz-GGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3922" y="-1565"/>
+            <point key="canvasLocation" x="5072.8000000000002" y="-1565.6671664167918"/>
         </scene>
         <!--Menu-->
         <scene sceneID="CsO-pu-WKi">
@@ -351,6 +360,7 @@
                         <viewLayoutGuide key="safeArea" id="t8P-aI-Eg2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="moB-aC-Aif">
+                        <barButtonItem key="backBarButtonItem" title=" " id="CmM-6w-PP7"/>
                         <barButtonItem key="leftBarButtonItem" image="shoppingCartSymbol" id="GT1-2P-fWD">
                             <connections>
                                 <action selector="checkoutTapped:" destination="ya9-ND-7uh" id="Bmb-ry-0Df"/>
@@ -370,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-dv-d8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3151.1999999999998" y="-867.61619190404804"/>
+            <point key="canvasLocation" x="3289" y="-869"/>
         </scene>
         <!--About-->
         <scene sceneID="ouJ-T0-Vji">
@@ -717,7 +727,7 @@ Friday-Sunday 11am-5pm</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsN-pT-ib8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258.4000000000001" y="-867.61619190404804"/>
+            <point key="canvasLocation" x="2473" y="-868"/>
         </scene>
         <!--About-->
         <scene sceneID="tUC-rt-SU6">
@@ -817,6 +827,24 @@ Friday-Sunday 11am-5pm</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyd-z8-LTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2473" y="578"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q60-lJ-CMX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fsb-YS-rWM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X8F-Sb-YMU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V9h-45-WlM" kind="relationship" relationship="rootViewController" id="F3U-Qw-xGC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="neq-gJ-nUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4164" y="-1565"/>
         </scene>
     </scenes>
     <resources>

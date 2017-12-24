@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330565E21FEF2EE000710BB4 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330565E11FEF2EE000710BB4 /* CheckoutViewController.swift */; };
 		3314D9D01FE96D1E001D7CF8 /* ChefMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314D9CF1FE96D1E001D7CF8 /* ChefMessageViewController.swift */; };
 		331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C3D021FB15768001CCEFF /* ConnectViewController.swift */; };
 		333179261FB221C900F1D5DE /* DrinkFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		0C87EB708D5D9507F7B1F979 /* Pods_RollingGrill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingGrill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		330565E11FEF2EE000710BB4 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		3314D9CF1FE96D1E001D7CF8 /* ChefMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefMessageViewController.swift; sourceTree = "<group>"; };
 		331C3D021FB15768001CCEFF /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		333179251FB221C900F1D5DE /* DrinkFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilterViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		336249C81FDB8A3200B529D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				330565E11FEF2EE000710BB4 /* CheckoutViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */,
 				33B3ADF81FE57E7D00C69C50 /* ThemeViewController.swift in Sources */,
 				336249CE1FDB90AC00B529D7 /* MockCustomer.swift in Sources */,
+				330565E21FEF2EE000710BB4 /* CheckoutViewController.swift in Sources */,
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
 				33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */,
 				338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */,
