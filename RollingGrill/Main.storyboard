@@ -227,7 +227,7 @@
                         <viewLayoutGuide key="safeArea" id="234-Bc-7PF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Checkout" id="hyu-nS-wpv">
-                        <barButtonItem key="leftBarButtonItem" title="X" id="efN-XM-LuO">
+                        <barButtonItem key="leftBarButtonItem" image="cancel" id="efN-XM-LuO">
                             <connections>
                                 <action selector="closeTapped:" destination="V9h-45-WlM" id="jNs-ga-ebE"/>
                             </connections>
@@ -292,6 +292,7 @@
                                             <outlet property="drinkDescriptionLabel" destination="deS-RP-qTl" id="td3-wT-6mT"/>
                                             <outlet property="drinkItemLabel" destination="niR-m0-Zet" id="uDJ-q7-1fK"/>
                                             <outlet property="drinkPriceLabel" destination="nuV-QP-Lme" id="mit-ah-RIY"/>
+                                            <segue destination="gRW-nc-BPI" kind="show" identifier="drinkDetails" id="jpY-xh-3Hl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -327,6 +328,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-dv-d8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3289" y="-869"/>
+        </scene>
+        <!--Menu Item-->
+        <scene sceneID="hPy-rT-3eX">
+            <objects>
+                <viewController id="gRW-nc-BPI" customClass="DrinkDetailsViewController" customModule="RollingGrill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PvX-6l-5wL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LY2-Bq-BIF">
+                                <rect key="frame" x="0.0" y="66" width="375" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ab-W1-lB3">
+                                        <rect key="frame" x="292" y="10" width="67" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drink Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t1-U5-ZnI">
+                                        <rect key="frame" x="8" y="8" width="103" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbz-QT-g9S">
+                                        <rect key="frame" x="8" y="36" width="351" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Oblique" family="Helvetica" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="obT-Za-QCP">
+                                        <rect key="frame" x="265" y="127" width="94" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="valueChanged:" destination="gRW-nc-BPI" eventType="valueChanged" id="2jd-Ax-omL"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIt-pX-WLK">
+                                        <rect key="frame" x="8" y="95" width="83" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9k-ts-qF6">
+                                        <rect key="frame" x="20" y="127" width="58" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="GlM-8u-J15"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu Item" id="7Iw-XY-ldA">
+                        <barButtonItem key="leftBarButtonItem" image="cancel" id="GsR-Wp-9bd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="drinkDescriptionLabel" destination="Sbz-QT-g9S" id="oUn-MV-oJV"/>
+                        <outlet property="drinkItemLabel" destination="6t1-U5-ZnI" id="Z1d-Wj-ROo"/>
+                        <outlet property="drinkPriceLabel" destination="8ab-W1-lB3" id="rBT-My-Z2C"/>
+                        <outlet property="quantityLabel" destination="N9k-ts-qF6" id="pqo-3u-xOw"/>
+                        <outlet property="stepper" destination="obT-Za-QCP" id="Unl-6g-9Wp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Hd-C2-mpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4164" y="-869.41529235382313"/>
         </scene>
         <!--About-->
         <scene sceneID="ouJ-T0-Vji">
@@ -796,6 +873,7 @@ Friday-Sunday 11am-5pm</string>
     <resources>
         <image name="Lotz" width="848" height="1254"/>
         <image name="atSymbol" width="25" height="25"/>
+        <image name="cancel" width="25" height="25"/>
         <image name="deliverySymbol" width="25" height="25"/>
         <image name="facebook" width="29" height="29"/>
         <image name="gallerySymbol" width="25" height="25"/>

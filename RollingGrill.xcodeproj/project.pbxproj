@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		330565E21FEF2EE000710BB4 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330565E11FEF2EE000710BB4 /* CheckoutViewController.swift */; };
+		33109B911FEF47AE004DB2FF /* DrinkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33109B901FEF47AE004DB2FF /* DrinkDetailsViewController.swift */; };
 		3314D9D01FE96D1E001D7CF8 /* ChefMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314D9CF1FE96D1E001D7CF8 /* ChefMessageViewController.swift */; };
 		331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C3D021FB15768001CCEFF /* ConnectViewController.swift */; };
 		33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33403D261FB0D44400016D78 /* MenuFilterViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		0C87EB708D5D9507F7B1F979 /* Pods_RollingGrill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollingGrill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		330565E11FEF2EE000710BB4 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		33109B901FEF47AE004DB2FF /* DrinkDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailsViewController.swift; sourceTree = "<group>"; };
 		3314D9CF1FE96D1E001D7CF8 /* ChefMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefMessageViewController.swift; sourceTree = "<group>"; };
 		331C3D021FB15768001CCEFF /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		33403D261FB0D44400016D78 /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33109B8E1FEF4777004DB2FF /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				33109B8F1FEF4783004DB2FF /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		33109B8F1FEF4783004DB2FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33109B901FEF47AE004DB2FF /* DrinkDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3314D9CD1FE96D04001D7CF8 /* ChefMessage */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +158,8 @@
 		336249C71FDB8A2900B529D7 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
-				3314D9CD1FE96D04001D7CF8 /* ChefMessage */,
 				336249C81FDB8A3200B529D7 /* View */,
+				3314D9CD1FE96D04001D7CF8 /* ChefMessage */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -272,6 +290,7 @@
 		33C844341F71D6BF00545D15 /* Drink */ = {
 			isa = PBXGroup;
 			children = (
+				33109B8E1FEF4777004DB2FF /* Details */,
 				331F0CAF1FA7B54400586361 /* View */,
 				33D1093D1F7EF6CF00374166 /* Cell */,
 				336249CD1FDB90AC00B529D7 /* MockCustomer.swift */,
@@ -456,6 +475,7 @@
 				339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */,
 				33B3ADF81FE57E7D00C69C50 /* ThemeViewController.swift in Sources */,
 				336249CE1FDB90AC00B529D7 /* MockCustomer.swift in Sources */,
+				33109B911FEF47AE004DB2FF /* DrinkDetailsViewController.swift in Sources */,
 				330565E21FEF2EE000710BB4 /* CheckoutViewController.swift in Sources */,
 				33C844381F71D6DC00545D15 /* MenuViewController.swift in Sources */,
 				33D1093F1F7EF6F600374166 /* DrinkTableViewCell.swift in Sources */,

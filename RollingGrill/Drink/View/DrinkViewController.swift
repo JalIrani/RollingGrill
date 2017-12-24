@@ -118,7 +118,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 shoppingCart[cell.drinkItemLabel.text!] = [price]
                 print(shoppingCart)
                 if indexPath.section == 0 {
-                    createTextFieldPopup(shoppingCartItem: cell.drinkItemLabel.text!)
+                    //createTextFieldPopup(shoppingCartItem: cell.drinkItemLabel.text!)
                 } else {
                     shoppingCart[cell.drinkItemLabel.text!] = [price, "none", "none"]
                 }
@@ -245,11 +245,6 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         alertController2.view.tintColor = UIColor.red
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "filterSectionsDrink" {
-
-        }
-    }
     
     func printShoppingCartItems() -> (String, Double) {
         var checkoutList = ""
@@ -269,4 +264,20 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         return (checkoutList, price)
     }
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "drinkDetails" {
+            let indexPath = drinkTableView.indexPathForSelectedRow
+            if let drinkCell = sender as? DrinkTableViewCell {
+                let drinkDetails = segue.destination as! DrinkDetailsViewController
+                drinkDetails.drinkItem = drinkCell.drinkItemLabel.text!
+                drinkDetails.drinkPrice = drinkCell.drinkPriceLabel.text!
+                drinkDetails.drinkDescription = drinkCell.drinkDescriptionLabel.text!
+                //print(indexPath?.section)
+            }
+        }
+     }
 }
