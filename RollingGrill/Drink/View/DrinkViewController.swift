@@ -265,17 +265,30 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return (checkoutList, price)
     }
     
+    @IBAction func unwindDetails(_ sender: UIStoryboardSegue) {
+        if sender.source is DrinkDetailsViewController {
+            if let detailsVC = sender.source as? DrinkDetailsViewController {
+                print(detailsVC.quantityLabel.text!)
+//                self.filterSection[0] = detailsVC.selectedFilter
+//                self.filterSectionIndex = detailsVC.selectedIndex
+            }
+        }
+    }
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "drinkDetails" {
-            let indexPath = drinkTableView.indexPathForSelectedRow
             if let drinkCell = sender as? DrinkTableViewCell {
-                let drinkDetails = segue.destination as! DrinkDetailsViewController
-                drinkDetails.drinkItem = drinkCell.drinkItemLabel.text!
-                drinkDetails.drinkPrice = drinkCell.drinkPriceLabel.text!
-                drinkDetails.drinkDescription = drinkCell.drinkDescriptionLabel.text!
+                print("Do we get called?")
+                if let navController = segue.destination as? UINavigationController {
+                    if let drinkDetailsVC = navController.topViewController as? DrinkDetailsViewController {
+                        drinkDetailsVC.drinkItem = drinkCell.drinkItemLabel.text!
+                        drinkDetailsVC.drinkPrice = drinkCell.drinkPriceLabel.text!
+                        drinkDetailsVC.drinkDescription = drinkCell.drinkDescriptionLabel.text!
+                    }
+                }
                 //print(indexPath?.section)
             }
         }

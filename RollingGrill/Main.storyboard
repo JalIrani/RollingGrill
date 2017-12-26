@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1cT-od-DAT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1cT-od-DAT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -292,7 +292,9 @@
                                             <outlet property="drinkDescriptionLabel" destination="deS-RP-qTl" id="td3-wT-6mT"/>
                                             <outlet property="drinkItemLabel" destination="niR-m0-Zet" id="uDJ-q7-1fK"/>
                                             <outlet property="drinkPriceLabel" destination="nuV-QP-Lme" id="mit-ah-RIY"/>
-                                            <segue destination="gRW-nc-BPI" kind="show" identifier="drinkDetails" id="jpY-xh-3Hl"/>
+                                            <segue destination="UYg-si-mTh" kind="popoverPresentation" identifier="drinkDetails" popoverAnchorView="bL4-0x-Of6" id="jpY-xh-3Hl">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -391,7 +393,16 @@
                         <viewLayoutGuide key="safeArea" id="GlM-8u-J15"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu Item" id="7Iw-XY-ldA">
-                        <barButtonItem key="leftBarButtonItem" image="cancel" id="GsR-Wp-9bd"/>
+                        <barButtonItem key="leftBarButtonItem" image="cancel" id="GsR-Wp-9bd">
+                            <connections>
+                                <action selector="dismissView:" destination="gRW-nc-BPI" id="pC8-CH-J0k"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zbq-SV-pat">
+                            <connections>
+                                <segue destination="daX-Sx-pgt" kind="unwind" unwindAction="unwindDetails:" id="t3K-0n-2lB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="drinkDescriptionLabel" destination="Sbz-QT-g9S" id="oUn-MV-oJV"/>
@@ -402,8 +413,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hd-C2-mpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="daX-Sx-pgt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4164" y="-869.41529235382313"/>
+            <point key="canvasLocation" x="5073" y="-870"/>
         </scene>
         <!--About-->
         <scene sceneID="ouJ-T0-Vji">
@@ -868,6 +880,24 @@ Friday-Sunday 11am-5pm</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neq-gJ-nUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4164" y="-1565"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sy4-aU-4cN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UYg-si-mTh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CtO-h2-2pC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gRW-nc-BPI" kind="relationship" relationship="rootViewController" id="AJl-Ug-8I7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SlO-Mq-UZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4163.1999999999998" y="-869.86506746626696"/>
         </scene>
     </scenes>
     <resources>
