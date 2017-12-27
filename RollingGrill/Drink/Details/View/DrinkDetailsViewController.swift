@@ -10,24 +10,26 @@ import UIKit
 
 class DrinkDetailsViewController: UIViewController {
 
+    // UI elements
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var stepper: UIStepper!
-    
     @IBOutlet weak var drinkItemLabel: UILabel!
     @IBOutlet weak var drinkDescriptionLabel: UILabel!
     @IBOutlet weak var drinkPriceLabel: UILabel!
     
+    // Values sent to Cart
     var drinkItem = String()
     var drinkDescription = String()
     var drinkPrice = String()
-    
-    var section = -1
-    var quantity = 0
-    
+    var quantity = "1"
     var provolone = false
     var cheddar = false
     var coleslaw = false
     
+    // Incoming section
+    var section = -1
+    
+    // CheckBox images
     let checkedImage = UIImage(named: "checkedBox")! as UIImage
     let uncheckedImage = UIImage(named: "uncheckedBox")! as UIImage
     
@@ -41,7 +43,6 @@ class DrinkDetailsViewController: UIViewController {
         drinkItemLabel.text = drinkItem
         drinkDescriptionLabel.text = drinkDescription
         drinkPriceLabel.text = drinkPrice
-        print(section)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +53,7 @@ class DrinkDetailsViewController: UIViewController {
     @IBAction func valueChanged(_ sender: Any) {
         if let castedStepper = sender as? UIStepper {
             quantityLabel.text = String(Int(castedStepper.value))
-            quantity = Int(castedStepper.value)
+            quantity = String(castedStepper.value)
         }
     }
     

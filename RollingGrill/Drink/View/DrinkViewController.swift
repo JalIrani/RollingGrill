@@ -48,6 +48,9 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var shoppingCart: [String: [String]] = [:]
     
+    // Name, price, quantity, [extraName: extraPrice], totalPrice
+    var cart = [(String, String, String, [String:String], String)]()
+    
     var drinkItemArray = [String]()
     var drinkPriceArray = [String]()
     var drinkDescriptionArray = [String]()
@@ -268,9 +271,24 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func unwindDetails(_ sender: UIStoryboardSegue) {
         if sender.source is DrinkDetailsViewController {
             if let detailsVC = sender.source as? DrinkDetailsViewController {
-                print(detailsVC.quantityLabel.text!)
-//                self.filterSection[0] = detailsVC.selectedFilter
-//                self.filterSectionIndex = detailsVC.selectedIndex
+                let quantity = Double(detailsVC.quantity)!
+                var total = Double(detailsVC.drinkPrice.replacingOccurrences(of: "$", with: "", options: NSString.CompareOptions.literal, range:nil))! * quantity
+  
+                var extrasArray:[String:String] = [:]
+                if detailsVC.coleslaw {
+                    extrasArray.updateValue("1.00", forKey: "Coleslaw")
+                    total += 1.00 * quantity
+                }
+                if (detailsVC.cheddar) {
+                    extrasArray.updateValue("0.50", forKey: "Cheddar")
+                    total += 0.50 * quantity
+                }
+                if detailsVC.provolone {
+                    extrasArray.updateValue("0.50", forKey: "Provolone")
+                    total += 0.50 * quantity
+                }
+                // Name, price, quantity, [extraName: extraPrice], totalPrice
+                cart.append((detailsVC.drinkItem, detailsVC.drinkPrice, String(detailsVC.quantity), extrasArray, String(total)))
             }
         }
     }
