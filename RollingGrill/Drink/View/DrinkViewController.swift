@@ -290,7 +290,6 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         drinkDetailsVC.section = (drinkTableView.indexPathForSelectedRow?.section)!
                     }
                 }
-                //print(indexPath?.section)
             }
         }
      }

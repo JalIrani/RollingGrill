@@ -22,8 +22,14 @@ class DrinkDetailsViewController: UIViewController {
     var drinkPrice = String()
     
     var section = -1
-    
     var quantity = 0
+    
+    var provolone = false
+    var cheddar = false
+    var coleslaw = false
+    
+    let checkedImage = UIImage(named: "checkedBox")! as UIImage
+    let uncheckedImage = UIImage(named: "uncheckedBox")! as UIImage
     
     override func viewDidLoad() {
         setupUI()
@@ -65,16 +71,58 @@ class DrinkDetailsViewController: UIViewController {
         quantityLabel.layer.cornerRadius = 5
         
         if section == 0 {
-            let button = CheckBox(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-            button.backgroundColor = .green
-            button.setTitle("Test Button", for: .normal)
-            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-            self.view.addSubview(button)
+            let provoloneButton = UIButton(frame: CGRect(x: 16, y: 270, width: 200, height: 40))
+            provoloneButton.setImage(uncheckedImage, for: UIControlState.normal)
+            provoloneButton.setTitleColor(UIColor.black, for: .normal)
+            provoloneButton.setTitle("Provolone (+ $0.50)", for: .normal)
+            provoloneButton.addTarget(self, action: #selector(provolonePressed), for: .touchUpInside)
+            
+            let cheddarButton = UIButton(frame: CGRect(x: 16, y: 300, width: 190, height: 40))
+            cheddarButton.setImage(uncheckedImage, for: UIControlState.normal)
+            cheddarButton.setTitleColor(UIColor.black, for: .normal)
+            cheddarButton.setTitle("Cheddar (+ $0.50)", for: .normal)
+            cheddarButton.addTarget(self, action: #selector(cheddarPressed), for: .touchUpInside)
+            
+            let coleslawButton = UIButton(frame: CGRect(x: 16, y: 330, width: 200, height: 40))
+            coleslawButton.setImage(uncheckedImage, for: UIControlState.normal)
+            coleslawButton.setTitleColor(UIColor.black, for: .normal)
+            coleslawButton.setTitle("Coleslaw (+ $1.00)", for: .normal)
+            coleslawButton.addTarget(self, action: #selector(coleslawPressed), for: .touchUpInside)
+            
+            self.view.addSubview(provoloneButton)
+            self.view.addSubview(cheddarButton)
+            self.view.addSubview(coleslawButton)
         }
     }
     
-    @objc func buttonAction(sender: UIButton!) {
-        print("Button tapped")
+    @objc func provolonePressed(sender: UIButton!) {
+        if provolone {
+            sender.setImage(uncheckedImage, for: UIControlState.normal)
+            provolone = false
+        } else {
+            sender.setImage(checkedImage, for: UIControlState.normal)
+            provolone = true
+        }
+    }
+    
+    @objc func cheddarPressed(sender: UIButton!) {
+        if cheddar {
+            sender.setImage(uncheckedImage, for: UIControlState.normal)
+            cheddar = false
+        } else {
+            sender.setImage(checkedImage, for: UIControlState.normal)
+            cheddar = true
+        }
+    }
+    
+    @objc func coleslawPressed(sender: UIButton!) {
+        if coleslaw {
+            sender.setImage(uncheckedImage, for: UIControlState.normal)
+            coleslaw = false
+        } else {
+            sender.setImage(checkedImage, for: UIControlState.normal)
+            coleslaw = true
+        }
     }
     /*
     // MARK: - Navigation
