@@ -287,6 +287,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         drinkDetailsVC.drinkItem = drinkCell.drinkItemLabel.text!
                         drinkDetailsVC.drinkPrice = drinkCell.drinkPriceLabel.text!
                         drinkDetailsVC.drinkDescription = drinkCell.drinkDescriptionLabel.text!
+                        drinkDetailsVC.section = (drinkTableView.indexPathForSelectedRow?.section)!
                     }
                 }
                 //print(indexPath?.section)

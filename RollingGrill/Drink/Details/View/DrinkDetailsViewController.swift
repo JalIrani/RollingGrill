@@ -21,24 +21,21 @@ class DrinkDetailsViewController: UIViewController {
     var drinkDescription = String()
     var drinkPrice = String()
     
+    var section = -1
+    
+    var quantity = 0
+    
     override func viewDidLoad() {
+        setupUI()
         super.viewDidLoad()
-        stepper.wraps = true
-        stepper.autorepeat = true
-        stepper.maximumValue = 10
-        stepper.minimumValue = 1
-        
-        quantityLabel.layer.borderWidth = 1.0
-        quantityLabel.layer.borderColor = UIColor.lightGray.cgColor
-        quantityLabel.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(drinkItem)
         drinkItemLabel.text = drinkItem
         drinkDescriptionLabel.text = drinkDescription
         drinkPriceLabel.text = drinkPrice
+        print(section)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,11 +46,35 @@ class DrinkDetailsViewController: UIViewController {
     @IBAction func valueChanged(_ sender: Any) {
         if let castedStepper = sender as? UIStepper {
             quantityLabel.text = String(Int(castedStepper.value))
+            quantity = Int(castedStepper.value)
         }
     }
     
     @IBAction func dismissView(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setupUI() {
+        stepper.wraps = true
+        stepper.autorepeat = true
+        stepper.maximumValue = 10
+        stepper.minimumValue = 1
+        
+        quantityLabel.layer.borderWidth = 1.0
+        quantityLabel.layer.borderColor = UIColor.lightGray.cgColor
+        quantityLabel.layer.cornerRadius = 5
+        
+        if section == 0 {
+            let button = CheckBox(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+            button.backgroundColor = .green
+            button.setTitle("Test Button", for: .normal)
+            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+            self.view.addSubview(button)
+        }
+    }
+    
+    @objc func buttonAction(sender: UIButton!) {
+        print("Button tapped")
     }
     /*
     // MARK: - Navigation

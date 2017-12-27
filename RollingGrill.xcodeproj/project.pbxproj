@@ -13,6 +13,7 @@
 		331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C3D021FB15768001CCEFF /* ConnectViewController.swift */; };
 		33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33403D261FB0D44400016D78 /* MenuFilterViewController.swift */; };
 		336249CE1FDB90AC00B529D7 /* MockCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336249CD1FDB90AC00B529D7 /* MockCustomer.swift */; };
+		33670FD31FF42439001DE005 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33670FD21FF42439001DE005 /* CheckBox.swift */; };
 		338B7BA41FA9305200BAB272 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */; };
 		339E0D6D1FA92AF200C24B05 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */; };
 		33B3ADF61FE57D6400C69C50 /* CardFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3ADF51FE57D6400C69C50 /* CardFieldViewController.swift */; };
@@ -41,6 +42,7 @@
 		33403D261FB0D44400016D78 /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
 		3345976F1FB7A0E400F87EF1 /* RollingGrill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollingGrill.entitlements; sourceTree = "<group>"; };
 		336249CD1FDB90AC00B529D7 /* MockCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCustomer.swift; sourceTree = "<group>"; };
+		33670FD21FF42439001DE005 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		338B7BA31FA9305200BAB272 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		339E0D6C1FA92AF200C24B05 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		33B3ADF51FE57D6400C69C50 /* CardFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFieldViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				33E463E31F8580CB000F0086 /* Colors.swift */,
 				33B991091FDF18E3000C4E1A /* BarButtonBadges.swift */,
 				33B3ADF71FE57E7D00C69C50 /* ThemeViewController.swift */,
+				33670FD21FF42439001DE005 /* CheckBox.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				33E463E41F8580CB000F0086 /* Colors.swift in Sources */,
 				33C548C41FA9259D00D34899 /* MenuTableViewCell.swift in Sources */,
 				33403D271FB0D44400016D78 /* MenuFilterViewController.swift in Sources */,
+				33670FD31FF42439001DE005 /* CheckBox.swift in Sources */,
 				331C3D031FB15768001CCEFF /* ConnectViewController.swift in Sources */,
 				33B3ADF61FE57D6400C69C50 /* CardFieldViewController.swift in Sources */,
 				3314D9D01FE96D1E001D7CF8 /* ChefMessageViewController.swift in Sources */,
