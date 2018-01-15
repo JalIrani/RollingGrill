@@ -250,6 +250,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     func printShoppingCartItems() -> (String, Double) {
+        // Name, price, quantity, [extraName: extraPrice], totalPrice
         var checkoutList = ""
         var price = 0.0
         for item in shoppingCart {
